@@ -1,0 +1,138 @@
+.about {
+  background-color: $color-beige;
+}
+
+.about__text-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1439 {
+    flex-direction: column;
+  }
+}
+
+.about__heading h2 {
+  margin: 11px 0 49px;
+  padding: 0;
+
+  color: $color-blue;
+  font-family: $ff-manrope;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 100% */
+
+  @include vp-1439 {
+    font-size: 34px;
+    line-height: 50px; /* 147.059% */
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px; /* 100% */
+  }
+}
+
+.about__heading b {
+  margin: 0;
+  padding: 0;
+
+  color: $color-basic;
+  font-family: $ff-manrope;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 145.455% */
+
+  @include vp-1439 {
+    font-size: 20px;
+    line-height: 26px; /* 130% */
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px; /* 137.5% */
+  }
+}
+
+.about__text h3 {
+  margin: 0 0 46px;
+  padding: 0;
+
+  color: $color-blue;
+  font-family: $ff-manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 112.5% */
+
+  @include vp-1439 {
+    font-size: 28px;
+    line-height: 28px; /* 100% */
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px; /* 122.222% */
+  }
+}
+
+.about__text p {
+  margin: 0 0 40px;
+  padding: 0;
+  width: 498px;
+
+  color: $color-basic;
+  font-family: $ff-manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+
+  @include vp-1439 {
+    line-height: 20px; /* 125% */
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.about__button {
+  margin: 0;
+  padding: 4px 4px 4px 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  color: $color-blue;
+  text-align: center;
+  font-family: $ff-manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  border-radius: 30px;
+  border: 1px solid $color-blue;
+
+  @include vp-767 {
+    padding: 4px 4px 4px 20px;
+    gap: 20px;
+
+    font-size: 12px;
+    line-height: 12px; /* 100% */
+    letter-spacing: 0.24px;
+  }
+}
+
+.about__button > div {
+  border-radius: 44px;
+  background: $color-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

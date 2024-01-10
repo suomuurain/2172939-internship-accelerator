@@ -5,21 +5,130 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Проект Internship programs. Cовместный проект правительств и волонтёрских бригад">
   <title>Internship programs</title>
+  <link rel="icon" type="image/png" sizes="52x52" href="./favicon.png">
+  <link rel="preload" href="fonts/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 <body>
-  <div data-test="slider">slider</div>
-  <div data-test="about">about</div>
-  <div data-test="programs">programs</div>
-  <div data-test="grant">grant</div>
-  <div data-test="news">news</div>
-  <div data-test="FAQ">FAQ</div>
-  <div data-test="reviews">reviews</div>
-  <div data-test="contacts">contacts</div>
-  <div data-test="form">form</div>
-  <div data-test="footer">footer</div>
+  <div class="wrapper">
+    <main class="main">
+      <div data-test="slider" class="slider">
+        <header class="header"></header>
+        <section class="main__hero hero"></section>
+      </div>
+
+      <div data-test="about">
+        <section class="main__about about">
+          <div class="container">
+            <div class="about__text-wrapper">
+              <div class="about__heading">
+                <h2>О проекте «Стажировка»</h2>
+                <b>«Стажировка» — совместный проект правительств и&nbsp;волонтёрских бригад.</b>
+              </div>
+              <div class="about__text">
+                <h3>Наша цель</h3>
+                <p>
+                  Наша деятельность направлена на&nbsp;повышение квалификации
+                  молодых специалистов на ранних и&nbsp;средних стадиях карьеры,
+                  предоставляя им&nbsp;инструменты для решения сложных проблем,
+                  с&nbsp;которыми сталкиваются в&nbsp;мире. Цель центра — наделить этих
+                  людей способностью инициировать значимые изменения.
+                </p>
+                <a href="#" class="about__button button">
+                  <span>Подробнее о проекте</span>
+                  <div></div>
+                </a>
+              </div>
+            </div>
+            <div class="about__advantages advantages">
+              <ul class="advantages__list">
+                <li class="advantages__item">
+                  <h4>Более 250 программ</h4>
+                  <p>
+                    учебных и рабочих, разной длительностью от&nbsp;3&nbsp;месяцев до&nbsp;1&nbsp;года
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <h4>Более 3000 участников</h4>
+                  <p>
+                    уже успешно прошли программу от&nbsp;«Стажировка» и&nbsp;остались в&nbsp;разных странах
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <h4>От&nbsp;4&nbsp;200&nbsp;$ до&nbsp;8&nbsp;400&nbsp;$</h4>
+                  <p>
+                    грант всем участникам для&nbsp;комфортного прохождения программы
+                  </p>
+                </li>
+                <li class="advantages__item">
+                  <h4>Участники из&nbsp;60&nbsp;стран</h4>
+                  <p>
+                    студенты со всего мира приезжают на&nbsp;программу «Стажировки»
+                  </p>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-test="programs">
+        <section class="main__programs programs">
+
+        </section>
+      </div>
+
+      <div data-test="grant">
+        <section class="main__grant grant">
+
+        </section>
+      </div>
+
+      <div data-test="news">
+        <section class="main__news news">
+
+        </section>
+      </div>
+
+      <div data-test="FAQ">
+        <section class="main__faq faq">
+
+        </section>
+      </div>
+
+      <div data-test="reviews">
+        <section class="main__reviews reviews">
+
+        </section>
+      </div>
+
+      <div data-test="contacts">
+        <section class="main__contacts contacts">
+
+        </section>
+      </div>
+
+      <div data-test="form">
+        <section class="main__form form">
+
+        </section>
+      </div>
+
+      <div data-test="footer">
+        <section class="main__footer footer">
+
+        </section>
+      </div>
+
+    </main>
+  </div>
+
   <script type="module" src="js/main.js"></script>
 </body>
 
