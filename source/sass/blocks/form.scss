@@ -1,5 +1,14 @@
 .form {
   background-color: $color-beige;
+  min-height: 803px;
+
+  @include vp-1439 {
+    min-height: 780px;
+  }
+
+  @include vp-767 {
+    min-height: 753px;
+  }
 }
 
 .form__wrapper {
@@ -7,16 +16,75 @@
 }
 
 .form__inner-wrapper {
+  padding: 70px 74px;
   background-color: $color-blue;
   width: 40%;
+  border-radius: 16px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1;
+
+  @include vp-1439 {
+    padding: 50px 45px;
+  }
+
+  @include vp-767 {
+    padding: 50px 15px;
+  }
+}
+
+.form__inner-wrapper h2 {
+  margin: 0 0 20px;
+  padding: 19px 0 18px;
+  color: $color-white;
+  font-family: $ff-manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 112.5% */
+
+  @include vp-1439 {
+    padding: 15px 0;
+    font-size: 28px;
+    line-height: 28px; /* 100% */
+  }
+
+  @include vp-767 {
+    padding: 6px 0;
+    font-size: 18px;
+    line-height: 22px; /* 122.222% */
+  }
+}
+
+.form__inner-wrapper p {
+  margin: 0 0 40px;
+  padding: 0;
+
+  color: $color-beige;
+  font-family: $ff-manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  opacity: 0.9;
+
+  @include vp-1439 {
+    line-height: 20px; /* 125% */
+  }
+
+  @include vp-767 {
+    margin: 0 0 30px;
+    font-size: 14px;
+  }
 }
 
 .form__background {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .form__background img {
@@ -32,4 +100,112 @@
   @include vp-767 {
     border-radius: 8%;
   }
+}
+
+.form__button {
+  margin: 0;
+  padding: 4px 4px 4px 30px;
+  width: 350px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+
+  color: $color-white;
+  background-color: transparent;
+  text-align: center;
+  font-family: $ff-manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  border-radius: 30px;
+  border: 1px solid $color-white;
+
+  @include vp-767 {
+    padding: 4px 4px 4px 20px;
+    gap: 18px;
+    width: 221px;
+
+    font-size: 12px;
+    line-height: 12px; /* 100% */
+    letter-spacing: 0.24px;
+  }
+
+  &:hover,
+  &:focus  {
+    color: $color-blue;
+    background-color: $color-white;
+    outline: none;
+  }
+
+  &:hover div,
+  &:focus div,
+  &:active div {
+    background-color: $color-blue;
+    outline: none;
+    transform: rotate(45deg)
+  }
+
+  &:hover svg,
+  &:focus svg {
+    color: $color-white;
+  }
+
+  &:active {
+    color: $color-blue-07;
+    background-color: $color-white;
+  }
+
+  &:active svg {
+    color: $color-white;
+    opacity: 0.7;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $color-disabled;
+    border: 1px solid $color-disabled;
+  }
+
+  &:disabled div,
+  &--disabled div {
+    background-color: $color-disabled;
+  }
+
+  &:disabled svg,
+  &--disabled svg {
+    opacity: 0.6;
+  }
+}
+
+.form__button > div {
+  border-radius: 44px;
+  background-color: $color-white;
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.form__button svg {
+  width: 8px;
+  height: 8px;
+  color: $color-blue;
+}
+
+.form__button span {
+  width: 240px;
+  text-align: center;
 }
