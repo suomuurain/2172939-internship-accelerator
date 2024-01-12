@@ -3,11 +3,15 @@
 }
 
 .about__text-wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 39% 40%;
+  gap: 159px;
+
+  margin: 0 0 60px;
 
   @include vp-1439 {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 }
 
@@ -55,7 +59,7 @@
   }
 }
 
-.about__text h3 {
+.about__info h3 {
   margin: 0 0 46px;
   padding: 0;
 
@@ -77,10 +81,9 @@
   }
 }
 
-.about__text p {
+.about__info p {
   margin: 0 0 40px;
   padding: 0;
-  width: 498px;
 
   color: $color-basic;
   font-family: $ff-manrope;
@@ -101,10 +104,12 @@
 .about__button {
   margin: 0;
   padding: 4px 4px 4px 30px;
+  width: 277px;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 28px;
 
   color: $color-blue;
   text-align: center;
@@ -121,7 +126,8 @@
 
   @include vp-767 {
     padding: 4px 4px 4px 20px;
-    gap: 20px;
+    gap: 18px;
+    width: 221px;
 
     font-size: 12px;
     line-height: 12px; /* 100% */
@@ -131,8 +137,21 @@
 
 .about__button > div {
   border-radius: 44px;
-  background: $color-blue;
+  background-color: $color-blue;
+  width: 46px;
+  height: 46px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.about__button > svg {
+  width: 8px;
+  height: 8px;
 }
