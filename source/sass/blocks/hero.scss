@@ -1,0 +1,300 @@
+.hero {
+  position: relative;
+}
+
+.hero h1,
+.hero h2 {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.hero .container {
+  padding: 0;
+  max-width: none;
+}
+
+.hero__swiper {
+  position: relative;
+
+  margin: 0 auto;
+  width: 100%;
+  min-height: 800px;
+
+  @include vp-1439 {
+    min-height: 1024px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+  }
+}
+
+.hero__slide {
+  position: relative;
+  min-height: 800px;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 100px 60px;
+
+  @include vp-1439 {
+    min-height: 1024px;
+    padding: 30px 45px 60px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    padding: 20px 15px;
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-blue-02;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.hero__background picture {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.hero__background img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+//info
+
+.hero__info {
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__info h3 {
+  margin: 0;
+  padding: 40px 50px 30px;
+  background-color: $color-white;
+  border-radius: 0 30px 30px 0;
+  width: 78%;
+
+  color: $color-blue;
+  font-family: $ff-manrope;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 62px; /* 114.815% */
+
+  @include vp-1439 {
+    padding: 30px 40px 24px;
+    width: 97%;
+
+    font-size: 36px;
+    line-height: 44px; /* 122.222% */
+  }
+
+  @include vp-767 {
+    padding: 20px 14px 16px;
+    border-radius: 0px 16px 16px 0px;
+    width: 100%;
+
+    font-size: 22px;
+    line-height: 26px; /* 118.182% */
+  }
+}
+
+.hero__desc-wrapper {
+  margin: -1px 0 0;
+  padding: 0px 50px 35px;
+  background-color: $color-white;
+  border-radius: 0px 0px 30px 30px;
+  width: 62%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+
+  @include vp-1439 {
+    padding: 0 40px 35px;
+    width: 87%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    padding: 0;
+    background-color: $color-transparent;
+    border-radius: none;
+    width: 100%;
+  }
+}
+
+.hero__info p {
+  margin: 0;
+  padding: 0;
+
+  color: $color-basic;
+  font-family: $ff-manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+
+  @include vp-1439 {
+    font-size: 16px;
+    line-height: 20px; /* 125% */
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+
+    padding: 0px 14px 15px 14px;
+    background-color: $color-white;
+    border-radius: 0px 0px 14px 0px;
+    width: 83%;
+  }
+}
+
+.hero__button-wrapper {
+  @include vp-767 {
+    margin: -1px 0 0;
+    padding: 10px 15px;
+    background-color: $color-white;
+    border-radius: 0px 0px 14px 14px;
+    width: 62%;
+  }
+}
+
+.hero__button {
+  margin: 0;
+  padding: 4px 4px 4px 30px;
+  width: 196px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+
+  color: $color-blue;
+  text-align: center;
+  font-family: $ff-manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 100% */
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  border-radius: 30px;
+  border: 1px solid $color-blue;
+  background-color: transparent;
+
+  @include vp-767 {
+    padding: 4px 4px 4px 20px;
+    gap: 18px;
+    width: 152px;
+
+    font-size: 12px;
+    line-height: 12px; /* 100% */
+    letter-spacing: 0.24px;
+  }
+
+  &:hover,
+  &:focus  {
+    color: $color-white;
+    background-color: $color-blue;
+    outline: none;
+  }
+
+  &:hover div,
+  &:focus div,
+  &:active div {
+    background-color: $color-white;
+    outline: none;
+    transform: rotate(45deg)
+  }
+
+  &:hover svg,
+  &:focus svg {
+    color: $color-blue;
+  }
+
+  &:active {
+    color: $color-white-07;
+    background-color: $color-blue;
+  }
+
+  &:active svg {
+    color: $color-blue;
+    opacity: 0.7;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $color-disabled;
+    border: 1px solid $color-disabled;
+  }
+
+  &:disabled div,
+  &--disabled div {
+    background-color: $color-disabled;
+  }
+
+  &:disabled svg,
+  &--disabled svg {
+    opacity: 0.6;
+  }
+}
+
+.hero__button > div {
+  border-radius: 44px;
+  background-color: $color-blue;
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.hero__button svg {
+  width: 8px;
+  height: 8px;
+  color: $color-white;
+}

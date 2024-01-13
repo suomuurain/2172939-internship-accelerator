@@ -18,8 +18,68 @@
   <div class="wrapper">
     <main class="main">
       <div data-test="slider" class="slider">
-        <header class="header"></header>
-        <section class="main__hero hero"></section>
+        <header class="header">
+
+        </header>
+
+        <section class="main__hero hero">
+          <div class="container">
+            <h1>Проект Стажировка - обучение за рубежом для молодых специалистов.</h1>
+            <div class="hero__wrapper">
+              <h2>В проект входят:</h2>
+
+              <!-- Slider main container -->
+              <div class="hero__swiper swiper">
+                <!-- Additional required wrapper -->
+                <div class="hero__swiper-wrapper swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="hero__slide swiper-slide" tabindex="0">
+                    <div class="hero__background">
+                      <div class="hero__overlay"></div>
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="./img/hero/intern-mobile.webp 1x, ./img/hero/intern-mobile@2x.webp 2x" width="350" height="568">
+                        <source type="image/webp" media="(max-width: 1439px)" srcset="./img/hero/intern-tablet.webp 1x, ./img/hero/intern-tablet@2x.webp 2x" width="768" height="1024">
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="./img/hero/intern-desktop.webp 1x, ./img/hero/intern-desktop@2x.webp 2x" width="1440" height="800">
+                        <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/hero/intern-mobile.jpg 1x, ./img/hero/intern-mobile@2x.jpg 2x" width="350" height="568">
+                        <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/hero/intern-tablet.jpg 1x, ./img/hero/intern-tablet@2x.jpg 2x" width="768" height="1024">
+                        <img src="./img/hero/intern-desktop.jpg" srcset="./img/hero/intern-desktop@2x.jpg 2x" alt="Стажер за рубежом." width="1440" height="800">
+                      </picture>
+                    </div>
+
+                    <div class="hero__info">
+                      <div class="hero__pagination-wrapper">
+                        <!-- Navigation pagination -->
+                        <div class="hero__swiper-pagination swiper-pagination"></div>
+                      </div>
+                      <h3>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h3>
+                      <div class="hero__desc-wrapper">
+                        <p>
+                          Погрузитесь в&nbsp;академическую программу, проходя
+                          практику в&nbsp;разных городах, ощущая настоящий
+                          студенческий стиль жизни!
+                        </p>
+                        <div class="hero__button-wrapper">
+                          <a href="#" class="hero__button button">
+                            <span>Подробнее</span>
+                            <div>
+                              <svg width="10" height="10">
+                                <use href="__spritemap#sprite-arrow-icon"></use>
+                              </svg>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       <div data-test="about">
