@@ -44,15 +44,79 @@
     outline: none;
   }
 
+  &:hover .accordion__button,
+  &:focus .accordion__button {
+    background-color: $color-transparent;
+    transition: $trans-default;
+    outline: none;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
+  }
+
   &:active {
     color: $color-condition;
     background-color: $color-white;
+  }
+
+  &:active .accordion__button {
+    background-color: $color-condition;
+    transition: $trans-default;
+
+    &::before {
+      background-color: $color-white;
+    }
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &:active h3 {
+    color: $color-condition;
   }
 }
 
 .accordion__element.is-active {
   border: 1px solid $color-blue;
   background-color: $color-blue;
+
+  &:hover .accordion__button,
+  &:focus .accordion__button {
+    border: 1px solid $color-white;
+    background-color: $color-transparent;
+    outline: none;
+
+    &::before {
+      background-color: $color-white;
+    }
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &:active {
+    background-color: $color-condition;
+  }
+
+  &:active .accordion__button {
+    border: 1px solid $color-white;
+    background-color: $color-white;
+
+    &::before {
+      background-color: $color-condition;
+    }
+
+    &::after {
+      background-color: $color-condition;
+    }
+  }
 }
 
 .accordion__element h3 {
