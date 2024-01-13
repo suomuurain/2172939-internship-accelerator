@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  margin: 0 auto;
+  padding: 0 106px;
+
+  @include vp-1439 {
+    padding: 0;
+  }
 }
 
 .accordion__element {
@@ -11,13 +18,24 @@
   color: $color-blue;
   background-color: $color-transparent;
 
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  column-gap: 10px;
+
+  padding: 40px;
   min-height: 120px;
 
   @include vp-1439 {
+    padding: 30px;
     min-height: 100px;
+    align-items: center;
+    column-gap: 1px;
   }
+
   @include vp-767 {
+    padding: 20px;
     min-height: 80px;
+    column-gap: 5px;
   }
 
   &:hover,
@@ -50,11 +68,15 @@
   text-align: left;
 
   @include vp-1439 {
+    padding: 12px 0;
+
     font-size: 22px;
     line-height: 26px; /* 118.182% */
   }
 
   @include vp-767 {
+    padding: 2px 0;
+
     font-size: 16px;
     line-height: 18px; /* 112.5% */
   }
@@ -64,10 +86,13 @@
   color: $color-white;
 }
 
+.accordion__element br {
+  @include vp-767 {
+    display: none;
+  }
+}
+
 .accordion__button {
-  position: absolute;
-  top: 25px;
-  right: 0;
   width: 40px;
   height: 40px;
   background-color: $color-blue;
@@ -76,6 +101,7 @@
   cursor: pointer;
   transition: $trans-default;
 
+  position: relative;
 
   &::before {
     content: "";
@@ -177,9 +203,16 @@
   }
 }
 
+.accordion__content {
+  @include vp-767 {
+    grid-column: 1/-1;
+  }
+}
+
 .accordion__wrapper p {
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
+  max-width: 690px;
 
   color: $color-beige;
   font-family: $ff-manrope;
@@ -189,6 +222,7 @@
   line-height: 26px; /* 162.5% */
 
   @include vp-1439 {
+    max-width: none;
     font-size: 16px;
     line-height: 20px; /* 125% */
   }
