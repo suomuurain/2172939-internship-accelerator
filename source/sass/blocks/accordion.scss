@@ -1,6 +1,45 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion__element {
+  position: relative;
+  border: 1px solid $color-blue;
+  border-radius: 16px;
+  color: $color-blue;
+  background-color: $color-transparent;
+
+  min-height: 120px;
+
+  @include vp-1439 {
+    min-height: 100px;
+  }
+  @include vp-767 {
+    min-height: 80px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-white;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-condition;
+    background-color: $color-white;
+  }
+}
+
+.accordion__element.is-active {
+  border: 1px solid $color-blue;
+  background-color: $color-blue;
+}
+
 .accordion__element h3 {
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
 
   color: $color-blue;
   font-family: $ff-manrope;
@@ -8,6 +47,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 34px; /* 121.429% */
+  text-align: left;
 
   @include vp-1439 {
     font-size: 22px;
@@ -20,7 +60,124 @@
   }
 }
 
-.accordion__element p {
+.accordion__element.is-active h3 {
+  color: $color-white;
+}
+
+.accordion__button {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $color-blue;
+  border: 1px solid $color-blue;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: $trans-default;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background-color: $color-white;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 1px;
+    background-color: $color-white;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    transition: 0.3s transform ease;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-transparent;
+    transition: $trans-default;
+    outline: none;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-condition;
+    transition: $trans-default;
+
+    &::before {
+      background-color: $color-white;
+    }
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+.accordion__element.is-active .accordion__button {
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  background-color: $color-white;
+
+  &::before {
+    background-color: $color-blue;
+  }
+
+  &::after {
+    background-color: $color-blue;
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-white;
+    background-color: $color-transparent;
+    outline: none;
+
+    &::before {
+      background-color: $color-white;
+    }
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &:active {
+    border: 1px solid $color-white;
+    background-color: $color-white;
+
+    &::before {
+      background-color: $color-condition;
+    }
+
+    &::after {
+      background-color: $color-condition;
+    }
+  }
+}
+
+.accordion__wrapper p {
   margin: 0;
   padding: 0;
 
