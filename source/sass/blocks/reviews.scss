@@ -1,0 +1,236 @@
+.reviews {
+  background-color: $color-beige;
+}
+
+.reviews .container {
+  padding: 0 100px;
+
+  @include vp-1439 {
+    padding: 0 0 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.reviews__wrapper h2 {
+  margin: 0;
+  padding: 0;
+
+  color: $color-blue;
+  font-family: $ff-manrope;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 100% */
+
+  @include vp-1439 {
+    font-size: 34px;
+    line-height: 50px; /* 147.059% */
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px; /* 100% */
+  }
+}
+
+.reviews__swiper {
+  position: relative;
+  width: 1240px;
+  margin: 0 0 40px;
+
+  @include vp-1439 {
+    width: calc(100% - 45px);
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.reviews__swiper-wrapper {
+  height: auto;
+}
+
+.reviews__slide {
+  background-color: $color-transparent;
+  border-radius: 16px;
+  border: 1px solid $color-blue;
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  max-width: 604px;
+  height: auto;
+
+  @include vp-1439 {
+    max-width: 560px;
+  }
+
+  @include vp-767 {
+    padding: 30px 15px;
+    gap: 25px;
+    max-width: none;
+  }
+}
+
+.reviews__header-wrapper {
+  display: grid;
+  grid-template-columns: 90px min-content 1fr;
+  align-items: center;
+  gap: 15px;
+
+  @include vp-767 {
+    grid-template-columns: 60px 1fr;
+    gap: 15px 10px;
+  }
+}
+
+.reviews__header-wrapper img {
+  border-radius: 50%;
+}
+
+.reviews__name-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reviews__name-wrapper p {
+  margin: 0;
+  padding: 0;
+
+  color: $color-blue;
+  font-family: $ff-manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+
+  @include vp-1439 {
+    font-size: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 18px; /* 128.571% */
+  }
+}
+
+.reviews__program-info {
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+
+  @include vp-767 {
+    justify-content: flex-start;
+
+    grid-column: 1/-1;
+  }
+}
+
+.reviews__program,
+.reviews__program-date {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  @include vp-767 {
+    gap: 8px;
+  }
+}
+
+.reviews__program > b,
+.reviews__program-date > b {
+  margin: 0;
+  padding: 0;
+
+  color: $color-blue;
+  font-family: $ff-manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+}
+
+.reviews__program > p,
+.reviews__program-date > p {
+  margin: 0;
+  padding: 0;
+
+  color: $color-basic;
+  font-family: $ff-manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px; /* 128.571% */
+
+  @include vp-1439 {
+    line-height: 20px; /* 142.857% */
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px; /* 116.667% */
+    opacity: 0.9;
+  }
+}
+
+.reviews__cite-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @include vp-767 {
+    gap: 20px;
+  }
+}
+
+.reviews__cite-wrapper h3 {
+  margin: 0;
+  padding: 0;
+
+  color: $color-blue;
+  font-family: $ff-manrope;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 108.333% */
+
+  @include vp-1439 {
+    font-size: 20px;
+    line-height: 24px; /* 120% */
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px; /* 112.5% */
+  }
+}
+
+.reviews__cite-wrapper cite {
+  margin: 0;
+  padding: 0;
+
+  color: $color-basic;
+  font-family: $ff-manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+
+  @include vp-1439 {
+    line-height: 20px; /* 125% */
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
