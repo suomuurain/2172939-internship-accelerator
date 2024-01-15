@@ -44,9 +44,6 @@
 .hero__slide {
   position: relative;
   min-height: 800px;
-
-  display: flex;
-  align-items: flex-end;
   padding: 30px 100px 60px;
 
   @include vp-1439 {
@@ -99,13 +96,54 @@
   flex-direction: column;
 }
 
-.hero__info h3 {
-  margin: 0;
+.hero__pagination-wrapper {
+  padding: 14px 20px;
+  background-color: $color-white;
+  border-radius: 20px 20px 0px 0px;
+  width: 8%;
+  position: relative;
+
+  min-height: 38px;
+
+  @include vp-1439 {
+    width: 14%;
+  }
+
+  @include vp-767 {
+    padding: 10px 16px;
+    border-radius: 12px 12px 0px 0px;
+    width: 28%;
+
+    min-height: 28px;
+  }
+}
+
+.hero__title-wrapper {
+  margin: -1px 0 0;
   padding: 40px 50px 30px;
   background-color: $color-white;
   border-radius: 0 30px 30px 0;
   width: 78%;
 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include vp-1439 {
+    padding: 30px 40px 24px;
+    width: 97%;
+  }
+
+  @include vp-767 {
+    padding: 20px 14px 16px;
+    border-radius: 0px 16px 16px 0px;
+    width: 100%;
+  }
+}
+
+.hero__title-wrapper h3 {
+  margin: 0;
+  padding: 0;
   color: $color-blue;
   font-family: $ff-manrope;
   font-size: 54px;
@@ -114,18 +152,11 @@
   line-height: 62px; /* 114.815% */
 
   @include vp-1439 {
-    padding: 30px 40px 24px;
-    width: 97%;
-
     font-size: 36px;
     line-height: 44px; /* 122.222% */
   }
 
   @include vp-767 {
-    padding: 20px 14px 16px;
-    border-radius: 0px 16px 16px 0px;
-    width: 100%;
-
     font-size: 22px;
     line-height: 26px; /* 118.182% */
   }
@@ -160,7 +191,23 @@
   }
 }
 
-.hero__info p {
+.hero__description-wrapper {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include vp-767 {
+    padding: 0px 14px 15px 14px;
+    background-color: $color-white;
+    border-radius: 0px 0px 14px 0px;
+    width: 83%;
+  }
+}
+
+.hero__description-wrapper p {
   margin: 0;
   padding: 0;
 
@@ -178,11 +225,6 @@
 
   @include vp-767 {
     font-size: 14px;
-
-    padding: 0px 14px 15px 14px;
-    background-color: $color-white;
-    border-radius: 0px 0px 14px 0px;
-    width: 83%;
   }
 }
 
