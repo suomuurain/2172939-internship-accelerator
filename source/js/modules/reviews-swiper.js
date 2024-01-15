@@ -8,20 +8,27 @@ const initReviewsSwiper = () => {
       320: {
         slidesPerView: 1,
         allowTouchMove: true,
+        scrollbar: false,
       },
       768: {
         slidesPerView: 1,
         spaceBetween: 30,
         allowTouchMove: true,
+
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
       },
       1440: {
         slidesPerView: 1,
         spaceBetween: 32,
         allowTouchMove: false,
+
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
       },
     },
-
-    autoHeight: true,
 
     navigation: {
       nextEl: '.reviews__swiper-button--next',

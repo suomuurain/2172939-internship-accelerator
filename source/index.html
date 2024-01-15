@@ -409,7 +409,7 @@
                         <img src="./img/reviews/review-1-desktop.jpg" srcset="./img/reviews/review-1-desktop@2x.jpg 2x" width="90" height="90" alt="Лола Алекс.">
                       </picture>
                       <div class="reviews__name-wrapper">
-                        <p>Лола Алекс</p>
+                        <p>Лола <br> Алекс</p>
                       </div>
                       <div class="reviews__program-info">
                         <div class="reviews__program">
@@ -446,7 +446,7 @@
                         <img src="./img/reviews/review-2-desktop.jpg" srcset="./img/reviews/review-2-desktop@2x.jpg 2x" width="90" height="90" alt="Давид Иванов.">
                       </picture>
                       <div class="reviews__name-wrapper">
-                        <p>Давид Иванов</p>
+                        <p>Давид <br> Иванов</p>
                       </div>
                       <div class="reviews__program-info">
                         <div class="reviews__program">
@@ -482,7 +482,7 @@
                         <img src="./img/reviews/review-1-desktop.jpg" srcset="./img/reviews/review-1-desktop@2x.jpg 2x" width="90" height="90" alt="Лола Алекс.">
                       </picture>
                       <div class="reviews__name-wrapper">
-                        <p>Лола Алекс</p>
+                        <p>Лола <br> Алекс</p>
                       </div>
                       <div class="reviews__program-info">
                         <div class="reviews__program">
@@ -519,7 +519,7 @@
                         <img src="./img/reviews/review-2-desktop.jpg" srcset="./img/reviews/review-2-desktop@2x.jpg 2x" width="90" height="90" alt="Давид Иванов.">
                       </picture>
                       <div class="reviews__name-wrapper">
-                        <p>Давид Иванов</p>
+                        <p>Давид <br> Иванов</p>
                       </div>
                       <div class="reviews__program-info">
                         <div class="reviews__program">
@@ -549,10 +549,24 @@
                 </div>
               </div>
 
-              <div class="reviews__scrollbar"></div>
-              <!-- Navigation buttons -->
-              <div class="reviews__swiper-button reviews__swiper-button--prev swiper-button-prev" aria-label="Предыдущий слайд."></div>
-              <div class="reviews__swiper-button reviews__swiper-button--next swiper-button-next" aria-label="Следующий слайд."></div>
+              <div class="reviews__nav-wraper">
+                <!-- Scrollbar -->
+                <div class="reviews__scrollbar swiper-scrollbar"></div>
+                <!-- Navigation buttons -->
+                <div class="reviews__swiper-buttons">
+                  <button class="reviews__swiper-button reviews__swiper-button--prev" type="button" aria-label="Кнопка назад.">
+                    <svg width="11" height="12">
+                      <use href="__spritemap#sprite-arrow-left"></use>
+                    </svg>
+                  </button>
+                  <button class="reviews__swiper-button reviews__swiper-button--next" type="button" aria-label="Кнопка вперед.">
+                    <svg width="11" height="12">
+                      <use href="__spritemap#sprite-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
             </div>
           </div>
         </section>

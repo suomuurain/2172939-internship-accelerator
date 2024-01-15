@@ -1,3 +1,4 @@
+/*pagination*/
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 10px;
   left: auto;
@@ -32,4 +33,29 @@
 
 .swiper-pagination-bullet-active {
   background-color: #316dc2;
+}
+
+/*scrollbar*/
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  // background-color: #316dc2;
+  // opacity: 0.2;
+  width: 91.5%;
+  height: 2px;
+  bottom: 11px;
+  left: 0;
+
+  @media (max-width: 1439px) {
+    width: 82%;
+  }
+}
+
+.swiper-scrollbar-drag {
+  height: 2px;
+  background-color: #316dc2;
+
+  width: 35%;
+
+  @media (max-width: 1439px) {
+    width: 58%;
+  }
 }
