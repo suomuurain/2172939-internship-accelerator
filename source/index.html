@@ -473,7 +473,181 @@
 
       <div data-test="news">
         <section class="main__news news" id="news">
+          <div class="container">
+            <div class="news__wrapper">
+              <h2>Новости и материалы</h2>
 
+              <div class="news__filters">
+
+              </div>
+
+              <!-- Slider main container -->
+              <div class="news__swiper swiper">
+                <!-- Additional required wrapper -->
+                <div class="news__swiper-wrapper swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="news__slide swiper-slide" tabindex="0">
+                    <div class="news__background">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="./img/news/library-mobile.webp 1x, ./img/news/library-mobile@2x.webp 2x" width="290" height="330">
+                        <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news/library-tablet.webp 1x, ./img/news/library-tablet@2x.webp 2x" width="324" height="350">
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/library-desktop.webp 1x, ./img/news/library-desktop@2x.webp 2x" width="604" height="400">
+                        <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/news/library-mobile.jpg 1x, ./img/news/library-mobile@2x.jpg 2x" width="290" height="330">
+                        <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/news/library-tablet.jpg 1x, ./img/news/library-tablet@2x.jpg 2x" width="324" height="350">
+                        <img src="./img/news/library-desktop.jpg" srcset="./img/news/library-desktop@2x.jpg 2x" alt="Студенты в библиотеке." width="604" height="400">
+                      </picture>
+                    </div>
+                    <div class="news__info">
+                      <div class="news__date-wrapper">
+                        <b>23/03/2023</b>
+                      </div>
+                      <div class="news__title-wrapper">
+                        <h3>Интервью с&nbsp;участницей программы стажировки</h3>
+                      </div>
+                      <div class="news__desc-wrapper">
+                        <div class="news__description-wrapper">
+                          <p>
+                            Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как&nbsp;прошла 6-месячная стажировка в&nbsp;ISOFound
+                          </p>
+                        </div>
+                        <div class="news__button-wrapper">
+                          <a href="#" class="news__button button">
+                            <svg width="10" height="10">
+                              <use href="__spritemap#sprite-arrow-icon"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="news__slide swiper-slide" tabindex="0">
+                    <div class="news__background">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="./img/news/seafront-mobile.webp 1x, ./img/news/seafront-mobile@2x.webp 2x" width="290" height="240">
+                        <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news/seafront-tablet.webp 1x, ./img/news/seafront-tablet@2x.webp 2x" width="324" height="350">
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/seafront-desktop.webp 1x, ./img/news/seafront-desktop@2x.webp 2x" width="286" height="400">
+                        <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/news/seafront-mobile.jpg 1x, ./img/news/seafront-mobile@2x.jpg 2x" width="290" height="240">
+                        <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/news/seafront-tablet.jpg 1x, ./img/news/seafront-tablet@2x.jpg 2x" width="324" height="350">
+                        <img src="./img/news/seafront-desktop.jpg" srcset="./img/news/seafront-desktop@2x.jpg 2x" alt="Вид на набережную." width="286" height="400">
+                      </picture>
+                    </div>
+                    <div class="news__info">
+                      <div class="news__date-wrapper">
+                        <b>20/03/2023</b>
+                      </div>
+                      <div class="news__title-wrapper">
+                        <h3>Путешествуем по&nbsp;миру</h3>
+                      </div>
+                      <div class="news__desc-wrapper">
+                        <div class="news__description-wrapper">
+                          <p>
+                            Какие места посещают наши студенты весной
+                          </p>
+                        </div>
+                        <div class="news__button-wrapper">
+                          <a href="#" class="news__button button">
+                            <svg width="10" height="10">
+                              <use href="__spritemap#sprite-arrow-icon"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="news__slide swiper-slide" tabindex="0">
+                    <div class="news__background">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="./img/news/badge-mobile.webp 1x, ./img/news/badge-mobile@2x.webp 2x" width="290" height="240">
+                        <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news/badge-tablet.webp 1x, ./img/news/badge-tablet@2x.webp 2x" width="324" height="350">
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/badge-desktop.webp 1x, ./img/news/badge-desktop@2x.webp 2x" width="286" height="400">
+                        <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/news/badge-mobile.jpg 1x, ./img/news/badge-mobile@2x.jpg 2x" width="290" height="240">
+                        <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/news/badge-tablet.jpg 1x, ./img/news/badge-tablet@2x.jpg 2x" width="324" height="350">
+                        <img src="./img/news/badge-desktop.jpg" srcset="./img/news/badge-desktop@2x.jpg 2x" alt="Значок волонтера." width="286" height="400">
+                      </picture>
+                    </div>
+                    <div class="news__info">
+                      <div class="news__date-wrapper">
+                        <b>17/03/2023</b>
+                      </div>
+                      <div class="news__title-wrapper">
+                        <h3>Новая программа волонтёрства</h3>
+                      </div>
+                      <div class="news__desc-wrapper">
+                        <div class="news__description-wrapper">
+                          <p>
+                            Программа помощи детямдлительностью 4&nbsp;месяца
+                          </p>
+                        </div>
+                        <div class="news__button-wrapper">
+                          <a href="#" class="news__button button">
+                            <svg width="10" height="10">
+                              <use href="__spritemap#sprite-arrow-icon"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="news__slide swiper-slide" tabindex="0">
+                    <div class="news__background">
+                      <picture>
+                        <source type="image/webp" media="(max-width: 767px)" srcset="./img/news/table-mobile.webp 1x, ./img/news/table-mobile@2x.webp 2x" width="290" height="240">
+                        <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news/table-tablet.webp 1x, ./img/news/table-tablet@2x.webp 2x" width="324" height="350">
+                        <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/table-desktop.webp 1x, ./img/news/table-desktop@2x.webp 2x" width="286" height="400">
+                        <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/news/table-mobile.jpg 1x, ./img/news/table-mobile@2x.jpg 2x" width="290" height="240">
+                        <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/news/table-tablet.jpg 1x, ./img/news/table-tablet@2x.jpg 2x" width="324" height="350">
+                        <img src="./img/news/table-desktop.jpg" srcset="./img/news/table-desktop@2x.jpg 2x" alt="Рабочий стол с принадлежностями." width="286" height="400">
+                      </picture>
+                    </div>
+                    <div class="news__info">
+                      <div class="news__date-wrapper">
+                        <b>10/03/2023</b>
+                      </div>
+                      <div class="news__title-wrapper">
+                        <h3>Построй свою карьеру</h3>
+                      </div>
+                      <div class="news__desc-wrapper">
+                        <div class="news__description-wrapper">
+                          <p>
+                            Ведущие компании готовы трудоустроить выпускников стажировки
+                          </p>
+                        </div>
+                        <div class="news__button-wrapper">
+                          <a href="#" class="news__button button">
+                            <svg width="10" height="10">
+                              <use href="__spritemap#sprite-arrow-icon"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="news__nav-wraper">
+                <!-- Pagination -->
+                <div class="news__swiper-pagination swiper-pagination"></div>
+                <!-- Navigation buttons -->
+                <div class="news__swiper-buttons">
+                  <button class="news__swiper-button news__swiper-button--prev" type="button" aria-label="Кнопка назад.">
+                    <svg width="11" height="12">
+                      <use href="__spritemap#sprite-arrow-left"></use>
+                    </svg>
+                  </button>
+                  <button class="news__swiper-button news__swiper-button--next" type="button" aria-label="Кнопка вперед.">
+                    <svg width="11" height="12">
+                      <use href="__spritemap#sprite-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
 
