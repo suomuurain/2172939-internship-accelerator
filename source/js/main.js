@@ -9,6 +9,7 @@ import {Form} from './vendor/form-validate/form';
 import {initHeroSwiper} from './modules/hero-swiper';
 import {initReviewsSwiper} from './modules/reviews-swiper';
 import {initProgramsSwiper} from './modules/programs-swiper';
+import {initNewsSwiper} from './modules/news-swiper';
 import {initAccordions} from './vendor/accordions/init-accordions';
 
 // ---------------------------------
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     initAccordions();
     initProgramsSwiper();
+    initNewsSwiper();
     initReviewsSwiper();
   });
 });
