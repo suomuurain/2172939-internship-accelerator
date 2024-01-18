@@ -1,9 +1,9 @@
 import Swiper from 'swiper/bundle';
 
 // init Swiper:
-const initReviewsSwiper = () => {
+const initProgramsSwiper = () => {
 
-  const swiperReviews = new Swiper('.reviews__swiper', {
+  const swiperPrograms = new Swiper('.programs__swiper', {
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -11,34 +11,34 @@ const initReviewsSwiper = () => {
         scrollbar: false,
       },
       768: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 30,
         allowTouchMove: true,
 
         scrollbar: {
-          el: '.reviews__scrollbar',
+          el: '.programs__scrollbar',
         },
       },
       1440: {
-        slidesPerView: 1,
+        slidesPerView: 3,
         spaceBetween: 32,
         allowTouchMove: false,
 
         scrollbar: {
-          el: '.reviews__scrollbar',
+          el: '.programs__scrollbar',
         },
       },
     },
 
     navigation: {
-      nextEl: '.reviews__swiper-button--next',
-      prevEl: '.reviews__swiper-button--prev',
-      disabledClass: 'reviews__swiper-button--disabled',
+      nextEl: '.programs__swiper-button--next',
+      prevEl: '.programs__swiper-button--prev',
+      disabledClass: 'programs__swiper-button--disabled',
     },
   });
 
-  return swiperReviews;
+  return swiperPrograms;
 
 };
 
-export {initReviewsSwiper};
+export {initProgramsSwiper};

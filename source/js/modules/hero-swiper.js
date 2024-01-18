@@ -13,9 +13,9 @@ const initHeroSwiper = () => {
       768: {
         allowTouchMove: true,
       },
-      1440: {
-        allowTouchMove: false,
-      },
+      // 1440: {
+      //   allowTouchMove: false,
+      // },
     },
 
     autoHeight: true,
