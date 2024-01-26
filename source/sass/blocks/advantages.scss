@@ -1,8 +1,10 @@
 .advantages {
   color: $color-white;
   background-color: $color-blue;
-  padding: 50px 106px 32px;
+  padding: 73px 106px 31px 126px;
   border-radius: 20px;
+
+  min-height: 442px;
 
   @include vp-1439 {
     padding: 62px 60px 40px;
@@ -20,7 +22,7 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  gap: 54px 52px;
 
   @include vp-1439 {
     gap: 20px 30px;
@@ -36,8 +38,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 26px;
 
-  padding: 30px 60px;
+  padding: 30px 59px 25px;
   border-radius: 16px;
   border: 1px solid $color-beige;
 
@@ -53,6 +56,18 @@
   @include vp-767 {
     padding: 24px 20px;
     gap: 8px;
+  }
+
+  &:nth-child(odd) {
+    gap: 34px;
+  }
+
+  &:first-child {
+    gap: 36px;
+  }
+
+  &:last-child {
+    gap: 54px;
   }
 }
 
@@ -83,7 +98,7 @@
 }
 
 .advantages__item p {
-  margin: 0;
+  margin: -5px 0 0;
   padding: 0;
 
   color: $color-beige;
@@ -105,7 +120,7 @@
 
 .advantages__item svg {
   position: absolute;
-  top: -21px;
+  top: -22px;
   left: -21px;
   padding: 10px 12px;
 

@@ -1,11 +1,11 @@
 .about {
-  background-color: $color-transparent;
+  min-height: 786px;
 }
 
 .about__text-wrapper {
   display: grid;
   grid-template-columns: 39% 40%;
-  gap: 159px;
+  gap: 152px;
 
   margin: 0 0 60px;
 
@@ -16,7 +16,7 @@
 }
 
 .about__heading h2 {
-  margin: 11px 0 49px;
+  margin: 3px 0 35px;
   padding: 0;
 
   color: $color-blue;
@@ -60,7 +60,7 @@
 }
 
 .about__info h3 {
-  margin: 0 0 46px;
+  margin: -2px 0 34px;
   padding: 0;
 
   color: $color-blue;
@@ -82,7 +82,7 @@
 }
 
 .about__info p {
-  margin: 0 0 40px;
+  margin: 0 0 32px;
   padding: 0;
 
   color: $color-basic;
@@ -103,8 +103,9 @@
 
 .about__button {
   margin: 0;
-  padding: 4px 4px 4px 30px;
+  padding: 4px 3px 2px 30px;
   width: 277px;
+  min-height: 54px;
 
   display: flex;
   justify-content: space-between;
@@ -129,6 +130,7 @@
     padding: 4px 4px 4px 20px;
     gap: 18px;
     width: 221px;
+    min-height: 42px;
 
     font-size: 12px;
     line-height: 12px; /* 100% */

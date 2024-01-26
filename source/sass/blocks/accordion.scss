@@ -22,8 +22,13 @@
   grid-template-columns: 1fr 40px;
   column-gap: 10px;
 
-  padding: 40px;
+  padding: 40px 40px 38px;
   min-height: 120px;
+
+  &--large {
+    padding: 38px 40px 33px;
+    min-height: 134px;
+  }
 
   @include vp-1439 {
     padding: 30px;
@@ -83,6 +88,7 @@
 }
 
 .accordion__element.is-active {
+  padding: 40px 40px 32px;
   border: 1px solid $color-blue;
   background-color: $color-blue;
 
@@ -121,7 +127,7 @@
 
 .accordion__element h3 {
   margin: 0;
-  padding: 10px 0;
+  padding: 2px 0;
 
   color: $color-blue;
   font-family: $ff-manrope;
@@ -144,6 +150,11 @@
     font-size: 16px;
     line-height: 18px; /* 112.5% */
   }
+}
+
+.accordion__element--large h3 {
+  padding: 0;
+  margin: -7px 0 0;
 }
 
 .accordion__element.is-active h3 {
@@ -274,7 +285,7 @@
 }
 
 .accordion__wrapper p {
-  margin: 20px 0 0;
+  margin: 13px 0 0;
   padding: 0;
   max-width: 690px;
 

@@ -1,6 +1,8 @@
 .grant {
   background-color: $color-blue;
-  padding: 120px 0;
+  padding: 120px 0 118px;
+
+  min-height: 810px;
 
   @include vp-1439 {
     padding: 100px 0;
@@ -13,8 +15,8 @@
 
 .grant__wrapper {
   display: grid;
-  grid-template-columns: 40% 40%;
-  gap: 138px;
+  grid-template-columns: 41% 40%;
+  gap: 128px;
 
   @include vp-1439 {
     grid-template-columns: 1fr;
@@ -23,7 +25,7 @@
 }
 
 .grant__heading h2 {
-  margin: 0 0 43px;
+  margin: 5px 0 30px;
   padding: 0;
 
   color: $color-white;
@@ -49,7 +51,7 @@
 }
 
 .grant__heading p {
-  margin: 0 0 40px;
+  margin: 0 0 32px;
   padding: 0;
 
   color: $color-beige;
@@ -86,8 +88,8 @@
 }
 
 .grant__info h3 {
-  margin: 0 0 45px;
-  padding: 15px 0;
+  margin: 9px 0 55px;
+  padding: 0;
 
   color: $color-white;
   font-family: $ff-manrope;
@@ -143,14 +145,24 @@
 
   display: block;
 
-  padding: 30px 25px;
+  padding: 22px 60px 22px 25px;
+  min-height: 72px;
+
+  &:nth-child(odd) {
+    padding: 23px 60px 22px 25px;
+  }
+
+  &:first-child,
+  &:last-child {
+    padding: 22px 60px 22px 25px;
+  }
 
   &::before {
     position: absolute;
     content: counter(item);
     counter-increment: item;
 
-    top: -21px;
+    top: -16px;
     left: -21px;
     width: 42px;
     height: 42px;
