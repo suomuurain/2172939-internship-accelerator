@@ -6,16 +6,16 @@ const initNewsSwiper = () => {
   const swiperNews = new Swiper('.news__swiper', {
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         allowTouchMove: true,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 4,
         spaceBetween: 30,
         allowTouchMove: true,
       },
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 32,
         allowTouchMove: false,
       },
@@ -25,6 +25,15 @@ const initNewsSwiper = () => {
       nextEl: '.news__swiper-button--next',
       prevEl: '.news__swiper-button--prev',
       disabledClass: 'news__swiper-button--disabled',
+    },
+
+    pagination: {
+      el: '.news__swiper-pagination',
+      type: 'bullets',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<button class="${className}">${(index + 1)}</button>`;
+      },
     },
   });
 
