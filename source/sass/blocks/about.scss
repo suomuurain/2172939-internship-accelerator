@@ -1,5 +1,13 @@
 .about {
   min-height: 786px;
+
+  @include vp-1439 {
+    min-height: 936px;
+  }
+
+  // @include vp-1439 {
+  //   min-height: 936px;
+  // }
 }
 
 .about__text-wrapper {
@@ -11,7 +19,12 @@
 
   @include vp-1439 {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 29px;
+    width: 78%;
+  }
+
+  @include vp-767 {
+    width: 100%;
   }
 }
 
@@ -27,6 +40,7 @@
   line-height: 50px; /* 100% */
 
   @include vp-1439 {
+    margin: -1px 0 25px;
     font-size: 34px;
     line-height: 50px; /* 147.059% */
   }
@@ -71,6 +85,7 @@
   line-height: 36px; /* 112.5% */
 
   @include vp-1439 {
+    margin: 0 0 22px;
     font-size: 28px;
     line-height: 28px; /* 100% */
   }
@@ -93,6 +108,7 @@
   line-height: 26px; /* 162.5% */
 
   @include vp-1439 {
+    margin: 0 0 36px;
     line-height: 20px; /* 125% */
   }
 
@@ -125,6 +141,10 @@
   border-radius: 30px;
   border: 1px solid $color-blue;
   background-color: transparent;
+
+  @include vp-1439 {
+    padding: 2px 3px 2px 30px;
+  }
 
   @include vp-767 {
     padding: 4px 4px 4px 20px;
