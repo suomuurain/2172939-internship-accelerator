@@ -21,8 +21,17 @@ const initHeroSwiper = () => {
     autoHeight: true,
 
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-slide-active .hero__swiper-pagination',
+      type: 'bullets',
+      clickable: true,
     },
+    on: {
+      slideChangeTransitionStart: function () {
+        swiperHero.pagination.init();
+        swiperHero.pagination.render();
+        swiperHero.pagination.update();
+      }
+    }
   });
 
   return swiperHero;

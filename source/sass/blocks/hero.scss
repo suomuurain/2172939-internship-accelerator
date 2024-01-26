@@ -44,7 +44,10 @@
 .hero__slide {
   position: relative;
   min-height: 800px;
-  padding: 30px 100px 60px;
+  padding: 30px 100px 59px;
+
+  display: flex;
+  align-items: flex-end;
 
   @include vp-1439 {
     min-height: 1024px;
@@ -91,36 +94,73 @@
 
 .hero__info {
   margin: 0 auto;
-
+  // padding: 379px 0 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+
+  @include vp-1439 {
+    // padding: 623px 0 0;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    // padding: 193px 0 0;
+    padding: 0;
+  }
 }
 
 .hero__pagination-wrapper {
   padding: 14px 20px;
   background-color: $color-white;
   border-radius: 20px 20px 0px 0px;
-  width: 8%;
+  width: 7.6%;
   position: relative;
 
   min-height: 38px;
 
   @include vp-1439 {
-    width: 14%;
+    width: 13.9%;
   }
 
   @include vp-767 {
     padding: 10px 16px;
     border-radius: 12px 12px 0px 0px;
-    width: 28%;
+    width: 27.6%;
 
     min-height: 28px;
   }
 }
 
+.hero__swiper-decor {
+  position: absolute;
+  right: -19px;
+  width: 20px;
+  height: 20px;
+
+  &--first {
+    bottom: 0;
+
+    @include vp-767 {
+      right: -15px;
+    }
+  }
+
+  &--second {
+    width: 26px;
+    height: 26px;
+    right: -25px;
+    top: 0;
+
+    @include vp-767 {
+      right: -16px;
+    }
+  }
+}
+
 .hero__title-wrapper {
   margin: -1px 0 0;
-  padding: 40px 50px 30px;
+  padding: 42px 50px 30px;
   background-color: $color-white;
   border-radius: 0 30px 30px 0;
   width: 78%;
@@ -130,8 +170,9 @@
   gap: 15px;
 
   @include vp-1439 {
+    margin: 0;
     padding: 30px 40px 24px;
-    width: 97%;
+    width: 97.2%;
   }
 
   @include vp-767 {
@@ -164,19 +205,23 @@
 
 .hero__desc-wrapper {
   margin: -1px 0 0;
-  padding: 0px 50px 35px;
+  padding: 0px 50px 28px;
   background-color: $color-white;
   border-radius: 0px 0px 30px 30px;
-  width: 62%;
+  width: 62.3%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 
+  position: relative;
+
   @include vp-1439 {
     padding: 0 40px 35px;
-    width: 87%;
+    width: 87.2%;
+
+    align-items: flex-start;
   }
 
   @include vp-767 {
@@ -187,7 +232,7 @@
     padding: 0;
     background-color: $color-transparent;
     border-radius: none;
-    width: 100%;
+    width: 92%;
   }
 }
 
@@ -200,15 +245,15 @@
   gap: 15px;
 
   @include vp-767 {
-    padding: 0px 14px 15px 14px;
+    padding: 0px 14px 10px 14px;
     background-color: $color-white;
     border-radius: 0px 0px 14px 0px;
-    width: 83%;
+    width: 100%;
   }
 }
 
 .hero__description-wrapper p {
-  margin: 0;
+  margin: -6px 0 0;
   padding: 0;
 
   color: $color-basic;
@@ -219,11 +264,15 @@
   line-height: 26px; /* 162.5% */
 
   @include vp-1439 {
+    margin: -3px 0 0;
+
     font-size: 16px;
     line-height: 20px; /* 125% */
   }
 
   @include vp-767 {
+    margin: -4px 0 0;
+
     font-size: 14px;
   }
 }
@@ -234,14 +283,16 @@
     padding: 10px 15px;
     background-color: $color-white;
     border-radius: 0px 0px 14px 14px;
-    width: 62%;
+    width: 68.2%;
+    position: relative;
   }
 }
 
 .hero__button {
-  margin: 0;
-  padding: 4px 4px 4px 30px;
+  margin: -6px 0 0;
+  padding: 3px 4px 3px 29px;
   width: 196px;
+  min-height: 54px;
 
   display: flex;
   justify-content: space-between;
@@ -262,10 +313,16 @@
   border: 1px solid $color-blue;
   background-color: transparent;
 
+  @include vp-1439 {
+    margin: 1px 0 0;
+    padding: 3px 4px 3px 30px;
+  }
+
   @include vp-767 {
-    padding: 4px 4px 4px 20px;
+    padding: 3px 3px 3px 20px;
     gap: 18px;
     width: 152px;
+    min-height: 42px;
 
     font-size: 12px;
     line-height: 12px; /* 100% */
