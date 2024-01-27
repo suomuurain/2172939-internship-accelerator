@@ -12,7 +12,7 @@
   }
 
   @include vp-767 {
-    padding: 42px 30px 40px;
+    padding: 42px 20px 40px 30px;
   }
 }
 
@@ -55,15 +55,22 @@
   }
 
   @include vp-767 {
-    padding: 24px 20px;
-    gap: 8px;
+    padding: 19px 20px 23px 19px;
+    gap: 9px;
+    min-height: 148px;
   }
 
   &:nth-child(2n+1) {
     gap: 34px;
 
     @include vp-1439 {
-      gap: 0;
+      gap: 12px;
+    }
+
+    @include vp-767 {
+      gap: 9px;
+      padding: 19px 16px 23px 19px;
+      min-height: 128px;
     }
   }
 
@@ -74,6 +81,12 @@
       gap: 12px;
       padding: 30px 33px 25px 29px;
     }
+
+    @include vp-767 {
+      gap: 9px;
+      padding: 19px 16px 23px 19px;
+      min-height: 128px;
+    }
   }
 
   &:last-child {
@@ -81,6 +94,12 @@
 
     @include vp-1439 {
       gap: 12px;
+    }
+
+    @include vp-767 {
+      gap: 9px;
+      padding: 19px 16px 23px 19px;
+      min-height: 128px;
     }
   }
 }
@@ -116,6 +135,14 @@
 
   @include vp-767 {
     display: none;
+  }
+}
+
+.advantages__item:nth-child(2n) h4 br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
   }
 }
 
@@ -160,5 +187,10 @@
 
   @include vp-1439 {
     top: -23px;
+  }
+
+  @include vp-767 {
+    width: 38px;
+    left: -19px;
   }
 }
