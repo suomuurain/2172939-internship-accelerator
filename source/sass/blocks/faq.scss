@@ -1,5 +1,13 @@
 .faq {
   min-height: 872px;
+
+  @include vp-1439 {
+    min-height: 726px;
+  }
+
+  @include vp-767 {
+    min-height: 711px;
+  }
 }
 
 .faq__wrapper h2 {

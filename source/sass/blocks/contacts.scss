@@ -1,13 +1,16 @@
 .contacts {
   background-color: $color-blue;
-  padding: 120px 0;
+  padding: 120px 0 119px;
+  min-height: 891px;
 
   @include vp-1439 {
     padding: 100px 0;
+    min-height: 906px;
   }
 
   @include vp-1439 {
     padding: 67px 0;
+    min-height: 651px;
   }
 }
 
@@ -26,7 +29,7 @@
 
 .contacts__heading h2 {
   margin: 0;
-  padding: 12px 0;
+  padding: 6px 0;
 
   color: $color-white;
   font-family: $ff-manrope;
@@ -46,13 +49,13 @@
 }
 
 .contacts__list {
-  margin: 0 0 40px;
+  margin: 0 0 32px;
   padding: 0;
   list-style-type: none;
 
   display: flex;
-  justify-content: flex-end;
-  width: 48%;
+  justify-content: space-between;
+  width: 604px;
 
   @include vp-1439 {
     margin: 0 0 30px;
@@ -69,7 +72,7 @@
 .contacts__item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 15px;
 
   @include vp-767 {
     gap: 15px;

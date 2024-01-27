@@ -17,7 +17,7 @@
 .form__inner-wrapper {
   padding: 70px 74px;
   background-color: $color-blue;
-  width: 40%;
+  width: 40.2%;
   border-radius: 16px;
 
   position: relative;
@@ -35,8 +35,8 @@
 }
 
 .form__inner-wrapper h2 {
-  margin: 0 0 20px;
-  padding: 19px 0 18px;
+  margin: 0 0 27px;
+  padding: 12px 0 0;
   color: $color-white;
   font-family: $ff-manrope;
   font-size: 32px;
@@ -58,7 +58,7 @@
 }
 
 .form__inner-wrapper p {
-  margin: 0 0 40px;
+  margin: 0 0 27px;
   padding: 0;
 
   color: $color-beige;
@@ -116,13 +116,13 @@
 .form__form-container form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .form__input-wrapper label {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .form__input-wrapper span {
@@ -153,7 +153,7 @@
 }
 
 .form__message input {
-  height: 120px;
+  height: 100px;
 }
 
 .form__button {
