@@ -1,12 +1,12 @@
 .button {
   cursor: pointer;
 
-  transition: opacity $trans-600;
+  transition: background-color $trans-default;
 
   &:hover,
   &:focus,
   &:active {
-    transition: opacity $trans-600;
+    transition: background-color $trans-default;
   }
 
   &:disabled {
