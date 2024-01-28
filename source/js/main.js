@@ -11,6 +11,7 @@ import {initReviewsSwiper} from './modules/reviews-swiper';
 import {initProgramsSwiper} from './modules/programs-swiper';
 import {initNewsSwiper} from './modules/news-swiper';
 import {initAccordions} from './vendor/accordions/init-accordions';
+import {CustomSelect} from './vendor/custom-select/custom-select';
 
 // ---------------------------------
 
@@ -31,9 +32,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+
     initAccordions();
     initProgramsSwiper();
     initNewsSwiper();
     initReviewsSwiper();
+
+    const select = new CustomSelect();
+    select.init();
   });
 });

@@ -1096,39 +1096,41 @@
                 <div class="form__form-container">
                   <form action="https://echo.htmlacademy.ru/" method="post">
                     <div class="form__name form__input-wrapper" data-validate-type="text" data-limitation="letters"
-                      data-message-base="Поле обязательно к заполнению"
-                      data-message-extra="Проверьте корректность заполнения поля"
                       data-required="data-required">
                       <label for="name">
                         <span>Имя</span>
-                        <input type="text" name="name" id="name" required
-                          autocomplete="off" minlength="1">
+                        <input type="text" name="name" id="name" required autocomplete="off">
                       </label>
                     </div>
                     <div class="form__phone form__input-wrapper" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
                       data-required="data-required">
                       <label for="phone">
                         <span>Телефон</span>
-                        <input type="tel" name="phone" id="phone" required
-                          autocomplete="off">
+                        <input type="tel" name="phone" id="phone" required autocomplete="off">
                       </label>
                     </div>
                     <div class="form__message form__input-wrapper" data-validate-type="text" data-limitation="letters-and-digit"
                       data-required="data-required">
                       <label for="message">
                         <span>Ваше сообщение</span>
-                        <input type="text" name="message" id="message" required
-                          autocomplete="off" minlength="5">
+                        <input type="text" name="message" id="message" required autocomplete="off">
                       </label>
                     </div>
-                    <!-- <div class="form__select" data-validate-type="select"
-                      data-required="data-required">
-                      <label for="message">
-                        <span>Выберите город</span>
-                        <input type="text" name="message" id="message" required
-                          autocomplete="off" minlength="5">
-                      </label>
-                    </div> -->
+
+                    <div class="form__select form__input-wrapper custom-select slide-up" data-select="data-select" data-validate-type="select" data-name="city-select">
+                      <span>Выберите город</span>
+                      <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                        <span class="custom-select__text"></span>
+                        <span class="custom-select__icon"></span>
+                      </button>
+                      <ul class="custom-select__list" role="listbox">
+                        <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+                      </ul>
+                    </div>
+
                     <button class="form__button button" type="submit">
                       <span>Отправить</span>
                       <div>
