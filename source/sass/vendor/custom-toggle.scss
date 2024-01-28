@@ -1,0 +1,132 @@
+.custom-toggle {
+  position: relative;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+
+  gap: 10px;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 7px 0 0 0;
+
+  // @media (min-width: 768px) and (max-width: 1439px) {
+  //   padding-bottom: 29px;
+  // }
+
+  input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+
+    clip: rect(0 0 0 0);
+  }
+
+  &.is-invalid {
+    label span {
+      border: 1px solid #ff5e66;
+      background: rgba(255, 94, 102, 0.2);
+    }
+  }
+}
+
+.custom-toggle__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.custom-toggle__label {
+  position: relative;
+  min-width: 20px;
+  min-height: 20px;
+
+  cursor: pointer;
+
+  input:disabled {
+    cursor: none;
+
+    & + span {
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid #ffffff;
+    }
+  }
+
+  input:checked {
+    + span {
+      background: #ffffff;
+    }
+
+    ~ svg {
+      display: inline;
+      stroke: #316dc2;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #316dc2;
+    border: 1px solid rgba(#ffffff, 0.7);
+    border-radius: 2px;
+  }
+
+  svg {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover:not(:disabled),
+  &:focus-within:not(:disabled) {
+    span {
+      border: 1px solid rgba(#ffffff, 1);
+      background: #316dc2;
+    }
+
+    svg {
+      stroke: #ffffff;
+    }
+  }
+
+  &--primary {
+    span {
+      background: #ffffff;
+      border: 1px solid rgba(#316dc2, 0.7);
+    }
+  }
+}
+
+.custom-toggle--secondary {
+  padding: 7px 0 0 0;
+
+  // @media (min-width: 320px) and (max-width: 767px) {
+  //   padding-bottom: 13px;
+  // }
+}
+
+.custom-toggle__text-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: #484848;
+    font-family: "Manrope", "Arial", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 100% */
+  }
+
+  &--secondary span {
+    color: rgba(#ffffff, 0.9);
+  }
+}

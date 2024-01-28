@@ -15,7 +15,7 @@
 }
 
 .form__inner-wrapper {
-  padding: 70px 74px;
+  padding: 70px 74px 40px;
   background-color: $color-blue;
   width: 40.2%;
   border-radius: 16px;
@@ -157,9 +157,10 @@
 }
 
 .form__button {
-  margin: 20px 0 0;
-  padding: 4px 4px 4px 30px;
+  margin: 24px 0 0;
+  padding: 3px 4px 3px 30px;
   width: 100%;
+  min-height: 54px;
 
   display: flex;
   justify-content: space-between;
@@ -190,6 +191,7 @@
     gap: 18px;
     // width: 221px;
     min-width: 221px;
+    min-height: 42px;
 
     font-size: 12px;
     line-height: 12px; /* 100% */
