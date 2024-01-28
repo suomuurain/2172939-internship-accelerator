@@ -1093,7 +1093,7 @@
                 <p>
                   Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;— мы&nbsp;на&nbsp;них ответим!
                 </p>
-                <div class="form__form-container">
+                <div class="form__form-container" data-form-validate data-callback="base">
                   <form action="https://echo.htmlacademy.ru/" method="post">
                     <div class="form__name form__input-wrapper" data-validate-type="text" data-limitation="letters"
                       data-required="data-required">
@@ -1113,7 +1113,7 @@
                       data-required="data-required">
                       <label for="message">
                         <span>Ваше сообщение</span>
-                        <input type="text" name="message" id="message" required autocomplete="off">
+                        <textarea name="message" id="message" required></textarea>
                       </label>
                     </div>
 
