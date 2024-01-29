@@ -230,7 +230,7 @@
                   с&nbsp;которыми сталкиваются в&nbsp;мире. Цель центра — наделить этих
                   людей способностью инициировать значимые изменения.
                 </p>
-                <a href="#" class="about__button button">
+                <a href="#" class="about__button button" data-open-modal="write-to-us">
                   <span>Подробнее о&nbsp;проекте</span>
                   <div>
                     <svg width="10" height="10">
@@ -1141,7 +1141,7 @@
                         </svg>
                       </label>
 
-                      <div class="custom-toggle__text-wrapper custom-toggle__text-wrapper--secondary">
+                      <div class="custom-toggle__text-wrapper">
                         <span class="custom-toggle__text">Я согласен на&nbsp;обработку моих персональных данных</span>
                       </div>
                     </div>
@@ -1240,6 +1240,89 @@
       </div>
 
     </main>
+  </div>
+
+  <div class="modal modal--preload" data-modal="write-to-us">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content form">
+        <button class="modal__close-button form__close-button button" type="button" aria-label="Закрыть попап" data-close-modal data-focus>
+          <svg width="20" height="20">
+            <use href="__spritemap#sprite-close-icon"></use>
+          </svg>
+        </button>
+        <div class="form__text-wrapper">
+          <h2>Напишите нам</h2>
+          <p>
+            Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;— мы&nbsp;на&nbsp;них ответим!
+          </p>
+        </div>
+        <div class="form__form-container" data-form-validate data-callback="base">
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <div class="form__name form__input-wrapper" data-validate-type="text" data-limitation="letters"
+              data-required="data-required">
+              <label for="name">
+                <span>Имя</span>
+                <input type="text" name="name" id="name" required autocomplete="off">
+              </label>
+            </div>
+            <div class="form__phone form__input-wrapper" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
+              data-required="data-required">
+              <label for="phone">
+                <span>Телефон</span>
+                <input type="tel" name="phone" id="phone" required autocomplete="off">
+              </label>
+            </div>
+            <div class="form__message form__input-wrapper" data-validate-type="text" data-limitation="letters-and-digit"
+              data-required="data-required">
+              <label for="message">
+                <span>Ваше сообщение</span>
+                <textarea name="message" id="message" required></textarea>
+              </label>
+            </div>
+
+            <div class="form__select form__input-wrapper custom-select slide-up" data-select="data-select" data-validate-type="select" data-name="city-select"
+              data-required="data-required">
+              <span>Выберите город</span>
+              <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                <span class="custom-select__text"></span>
+                <span class="custom-select__icon"></span>
+              </button>
+              <ul class="custom-select__list" role="listbox">
+                <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+                <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+                <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+                <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
+              </ul>
+            </div>
+
+            <div class="custom-toggle custom-toggle--secondary" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
+              <label class="custom-toggle__label">
+                <input type="checkbox" name="checkbox" value="agree" name="user-agreement" checked>
+                <span></span>
+                <svg width="10" height="8" aria-hidden="true">
+                  <use href="__spritemap#sprite-checkbox-icon"></use>
+                </svg>
+              </label>
+
+              <div class="custom-toggle__text-wrapper custom-toggle__text-wrapper--secondary">
+                <span class="custom-toggle__text">Я согласен на&nbsp;обработку моих персональных данных</span>
+              </div>
+            </div>
+
+            <button class="form__button button" type="submit">
+              <span>Отправить</span>
+              <div>
+                <svg width="10" height="10">
+                  <use href="__spritemap#sprite-arrow-icon"></use>
+                </svg>
+              </div>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <script type="module" src="js/main.js"></script>
