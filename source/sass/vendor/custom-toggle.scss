@@ -118,7 +118,7 @@
   flex-direction: column;
 
   span {
-    color: #484848;
+    color: rgba(#ffffff, 0.9);
     font-family: "Manrope", "Arial", sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -127,6 +127,6 @@
   }
 
   &--secondary span {
-    color: rgba(#ffffff, 0.9);
+    color: #484848;
   }
 }
