@@ -4,6 +4,10 @@
   z-index: 30;
   transition: transform 0.3s ease, background-color 0.3s ease;
 
+  @include vp-767 {
+    padding: 20px 0;
+  }
+
   &--sticky {
     position: fixed;
     top: 0;
@@ -15,10 +19,21 @@
     transform: translateY(-100%);
   }
 
+  &.is-open {
+    background-color: $color-overlay;
+    height: 100vh;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .is-open & {
+      @include vp-767 {
+        justify-content: flex-end;
+      }
+    }
   }
 
   &__logo {
@@ -31,15 +46,25 @@
     border-radius: 50%;
     background-color: $color-white;
 
+    transition: background-color $trans-default;
+
+    .is-open & {
+      @include vp-767 {
+        display: none;
+      }
+    }
+
     &:hover,
     &:focus {
       outline: none;
       background-color: $color-blue;
+      transition: background-color $trans-default;
     }
 
     &:hover svg,
     &:focus svg {
       color: $color-white;
+      transition: background-color $trans-default;
     }
 
     &:active svg {
@@ -58,18 +83,17 @@
   }
 
   &__navigation {
-    background-color: $color-overlay;
+    background-color: $color-blue;
 
     display: flex;
     flex-direction: column;
 
-    top: 0;
-    bottom: 0;
-    left: 0;
+    border-radius: 16px;
+    top: 88px;
     right: 0;
     opacity: 0;
-    margin: 0;
-    padding: 88px 20px 20px 20px;
+    margin: 0 100px 0 0;
+    padding: 29px 25px;
 
     position: fixed;
     pointer-events: none;
@@ -78,6 +102,18 @@
 
     visibility: hidden;
     z-index: 20;
+
+    width: 286px;
+
+    @include vp-1439 {
+      margin: 0 45px 0 0;
+    }
+
+    @include vp-767 {
+      width: 290px;
+      margin: 0 15px 0 0;
+      top: 78px;
+    }
 
     .is-open & {
       opacity: 1;
@@ -94,9 +130,8 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     flex-direction: column;
-    gap: 25px;
+    gap: 18px;
 
     margin: 0;
     padding: 0;
@@ -126,7 +161,6 @@
 
     transition: color 0.3s ease;
 
-
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
         &:not(span) {
@@ -134,6 +168,13 @@
           opacity: 1;
         }
       }
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      color: $color-white;
+      opacity: 1;
     }
   }
 
@@ -150,20 +191,20 @@
   }
 
   &__sublist {
-    margin: 0;
+    margin: 0 0 0 16px;
     padding: 0;
     list-style: none;
 
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 4px;
   }
 
   &__sublist-item {
     transition: opacity ease-out 0.15s, transform ease-out 0.15s;
 
     &:first-child {
-      margin: 20px 0 0;
+      margin: 13px 0 0;
     }
   }
 
@@ -183,6 +224,13 @@
           opacity: 0.9;
         }
       }
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      color: $color-white;
+      opacity: 1;
     }
   }
 
@@ -217,22 +265,33 @@
       text-transform: uppercase;
     }
 
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background: $color-blue;
+      outline: none;
+
+      span {
+        color: $color-white;
+      }
+
+      .header__button {
+        background-color: $color-white;
+      }
+
+      .header__button svg {
+        color: $color-blue;
+      }
+    }
+
     .is-open & {
-      // .header__burger-text {
-      //   opacity: 0;
-      //   pointer-events: none;
-      //   transition: opacity 0.3s ease 0s;
-      // }
-
-      // .header__burger-icon {
-      //   opacity: 1;
-      //   pointer-events: all;
-      //   transition: opacity 0.3s ease 0.2s;
-      // }
-
       background: $color-blue;
       min-width: 286px;
       transition: all $trans-default;
+
+      @include vp-767 {
+        min-width: 290px;
+      }
 
       span {
         color: $color-white;
@@ -268,40 +327,14 @@
 
   &__button-opened {
     display: flex;
+
+    svg {
+      color: $color-white;
+      opacity: 1;
+    }
   }
+}
 
-  // &__burger-text {
-  //   font-size: 18px;
-  //   font-family: "Neue Machina", "Arial", sans-serif;
-  //   font-weight: 700;
-  //   line-height: 1;
-  //   transition: opacity 0.3s ease 0.1s;
-  //   cursor: pointer;
-
-  //   .is-open & {
-  //     opacity: 0;
-  //     pointer-events: none;
-  //     transition: opacity 0.3s ease 0s;
-  //   }
-  // }
-
-  // &__burger-icon {
-  //   stroke: #ffffff;
-  //   opacity: 0;
-  //   transition: opacity 0.3s ease;
-  //   pointer-events: none;
-  //   position: absolute;
-  //   right: 0;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   cursor: pointer;
-
-  //   .is-open & {
-  //     opacity: 1;
-  //     pointer-events: all;
-  //     transition: opacity 0.3s ease 0.2s;
-  //   }
-  // }
-
-
+.header__item.is-active .header__link-submenu svg{
+  transform: rotate(180deg);
 }
