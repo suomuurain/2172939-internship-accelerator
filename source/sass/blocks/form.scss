@@ -140,7 +140,8 @@
 
   @include vp-767 {
     font-size: 12px;
-    line-height: 14px; /* 116.667% */  }
+    line-height: 14px; /* 116.667% */
+  }
 }
 
 .form__input-wrapper input,
@@ -169,6 +170,7 @@
 
   &:disabled,
   &--disabled {
+    background-color: $color-white;
     border: 1px solid $color-white;
     pointer-events: none;
     opacity: 0.4;
@@ -179,7 +181,7 @@
   input,
   textarea {
     border: 1px solid $color-error;
-    background-color: rgba($color-error, 0.2);;
+    background-color: rgba($color-error, 0.2);
   }
 }
 
@@ -313,17 +315,24 @@
 }
 
 //for modals
-.form__text-wrapper {
+.form__text-wrapper--secondary {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 7px;
+
+  margin: 0 0 20px;
+
+  @include vp-1439 {
+    gap: 13px;
+  }
 
   @include vp-767 {
-    gap: 15px;
+    gap: 8px;
+    align-items: center;
   }
 }
 
-.form__text-wrapper h2 {
+.form__text-wrapper--secondary h2 {
   margin: 0;
   padding: 0;
 
@@ -346,7 +355,7 @@
   }
 }
 
-.form__text-wrapper p {
+.form__text-wrapper--secondary p {
   margin: 0;
   padding: 0;
 
@@ -364,27 +373,133 @@
 
   @include vp-767 {
     font-size: 14px;
+    width: 220px;
   }
 }
 
-.modal__content .form__input-wrapper input,
-.modal__content .form__input-wrapper textarea {
-  border: 1px solid $color-basic-03;
+.form__text-wrapper--secondary p br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+  }
 }
 
-.modal__content .form__input-wrapper span {
+.form__form-container--secondary form {
+  @include vp-1439 {
+    gap: 14px;
+  }
+
+  @include vp-767 {
+    gap: 15px;
+  }
+}
+
+.form--secondary {
+  width: 510px;
+  min-height: 611px;
+
+  @include vp-1439 {
+    min-height: 602px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+    min-height: 521px;
+  }
+}
+
+.form__input-wrapper--secondary span {
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+  }
+}
+
+.form__input-wrapper--secondary input,
+.form__input-wrapper--secondary textarea {
+  border: 1px solid $color-basic-03;
+  color: $color-basic;
+
+  @include vp-767 {
+    height: 44px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $color-basic;
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: $color-disabled-secondary;
+    border: 1px solid $color-disabled-secondary;
+    pointer-events: none;
+    opacity: 0.2;
+  }
+}
+
+.form__input-wrapper--secondary span {
   color: $color-basic-08;
 }
 
-.modal__content .form__button {
+.form__button--secondary {
+  margin: 13px auto 0;
   color: $color-blue;
-}
-
-.modal__content.form {
-  width: 510px;
-  min-height: 611px;
-}
-
-.modal__content .form__button {
+  border: 1px solid $color-blue;
   width: 194px;
+  padding-left: 29px;
+
+  @include vp-1439 {
+    margin: 16px auto 0;
+    min-width: 194px;
+  }
+
+  @include vp-767 {
+    margin: 12px auto 0;
+    width: 100%;
+    min-height: 42px;
+    padding: 2px 3px 2px 68px;
+  }
+
+  &:hover,
+  &:focus  {
+    color: $color-white;
+    background-color: $color-blue;
+  }
+
+  &:hover div,
+  &:focus div,
+  &:active div {
+    background-color: $color-white;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    color: $color-blue;
+  }
+
+  &:active {
+    color: $color-white-07;
+    background-color: $color-blue;
+  }
+
+  &:active svg {
+    color: $color-blue;
+    opacity: 0.7;
+  }
+}
+
+.form__button--secondary > div {
+  background-color: $color-blue;
+}
+
+.form__button--secondary svg {
+  color: $color-white;
+}
+
+.form__button--secondary span {
+  width: 84px;
 }

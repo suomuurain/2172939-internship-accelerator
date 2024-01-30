@@ -11,9 +11,9 @@
   width: 100%;
   padding: 4px 0 0 0;
 
-  // @media (min-width: 768px) and (max-width: 1439px) {
-  //   padding-bottom: 29px;
-  // }
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding: 6px 0 0 0;
+  }
 
   input {
     position: absolute;
@@ -97,20 +97,41 @@
     }
   }
 
-  &--primary {
+  &--secondary {
     span {
       background: #ffffff;
       border: 1px solid rgba(#316dc2, 0.7);
+    }
+
+    input:checked {
+      + span {
+        background: #316dc2;
+      }
+
+      ~ svg {
+        display: inline;
+        stroke: #ffffff;
+      }
+    }
+
+    &:hover:not(:disabled),
+    &:focus-within:not(:disabled) {
+      span {
+        border: 1px solid rgba(#316dc2, 1);
+        background: #ffffff;
+      }
+
+      svg {
+        stroke: #316dc2;
+      }
     }
   }
 }
 
 .custom-toggle--secondary {
-  padding: 4px 0 0 0;
-
-  // @media (min-width: 320px) and (max-width: 767px) {
-  //   padding-bottom: 13px;
-  // }
+  @media (min-width: 320px) and (max-width: 767px) {
+    padding: 2px 0 0 0;
+  }
 }
 
 .custom-toggle__text-wrapper {

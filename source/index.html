@@ -1132,7 +1132,7 @@
                       </ul>
                     </div>
 
-                    <div class="custom-toggle custom-toggle--secondary" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                    <div class="custom-toggle" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
                       <label class="custom-toggle__label">
                         <input type="checkbox" name="checkbox" value="agree" name="user-agreement" checked>
                         <span></span>
@@ -1245,50 +1245,43 @@
   <div class="modal modal--preload" data-modal="write-to-us">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content form">
+      <div class="modal__content form form--secondary">
         <button class="modal__close-button form__close-button button" type="button" aria-label="Закрыть попап" data-close-modal data-focus>
           <svg width="20" height="20">
             <use href="__spritemap#sprite-close-icon"></use>
           </svg>
         </button>
-        <div class="form__text-wrapper">
+        <div class="form__text-wrapper form__text-wrapper--secondary">
           <h2>Напишите нам</h2>
           <p>
-            Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;— мы&nbsp;на&nbsp;них ответим!
+            Оставьте ваши контакты, <br> если у&nbsp;вас остались вопросы&nbsp;— мы&nbsp;на&nbsp;них ответим!
           </p>
         </div>
-        <div class="form__form-container" data-form-validate data-callback="base">
+        <div class="form__form-container form__form-container--secondary" data-form-validate data-callback="base">
           <form action="https://echo.htmlacademy.ru/" method="post">
-            <div class="form__name form__input-wrapper" data-validate-type="text" data-limitation="letters"
+            <div class="form__name form__input-wrapper form__input-wrapper--secondary" data-validate-type="text" data-limitation="letters"
               data-required="data-required">
               <label for="name">
                 <span>Имя</span>
                 <input type="text" name="name" id="name" required autocomplete="off">
               </label>
             </div>
-            <div class="form__phone form__input-wrapper" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
+            <div class="form__phone form__input-wrapper form__input-wrapper--secondary" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
               data-required="data-required">
               <label for="phone">
                 <span>Телефон</span>
                 <input type="tel" name="phone" id="phone" required autocomplete="off">
               </label>
             </div>
-            <div class="form__message form__input-wrapper" data-validate-type="text" data-limitation="letters-and-digit"
-              data-required="data-required">
-              <label for="message">
-                <span>Ваше сообщение</span>
-                <textarea name="message" id="message" required></textarea>
-              </label>
-            </div>
 
-            <div class="form__select form__input-wrapper custom-select slide-up" data-select="data-select" data-validate-type="select" data-name="city-select"
+            <div class="form__select form__select--secondary form__input-wrapper form__input-wrapper--secondary custom-select custom-select--secondary slide-up" data-select="data-select" data-validate-type="select" data-name="city-select"
               data-required="data-required">
               <span>Выберите город</span>
-              <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+              <button class="custom-select__button custom-select__button--secondary" type="button" aria-label="Выберите одну из опций">
                 <span class="custom-select__text"></span>
-                <span class="custom-select__icon"></span>
+                <span class="custom-select__icon custom-select__icon--secondary"></span>
               </button>
-              <ul class="custom-select__list" role="listbox">
+              <ul class="custom-select__list custom-select__list--secondary" role="listbox">
                 <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
                 <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
                 <li class="custom-select__item" tabindex="0" data-select-value="spb" aria-selected="false" role="option">Санкт-Петербург</li>
@@ -1297,7 +1290,7 @@
             </div>
 
             <div class="custom-toggle custom-toggle--secondary" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
-              <label class="custom-toggle__label">
+              <label class="custom-toggle__label custom-toggle__label--secondary">
                 <input type="checkbox" name="checkbox" value="agree" name="user-agreement" checked>
                 <span></span>
                 <svg width="10" height="8" aria-hidden="true">
@@ -1310,7 +1303,7 @@
               </div>
             </div>
 
-            <button class="form__button button" type="submit">
+            <button class="form__button form__button--secondary button" type="submit">
               <span>Отправить</span>
               <div>
                 <svg width="10" height="10">
