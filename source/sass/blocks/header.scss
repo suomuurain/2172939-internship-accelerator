@@ -25,13 +25,12 @@
   }
 
   &__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 52px 1fr;
 
     .is-open & {
       @include vp-767 {
-        justify-content: flex-end;
+        grid-template-columns: 1fr;
       }
     }
   }
@@ -89,13 +88,9 @@
     flex-direction: column;
 
     border-radius: 16px;
-    top: 88px;
-    right: 0;
     opacity: 0;
-    margin: 0 100px 0 0;
     padding: 29px 25px;
 
-    position: fixed;
     pointer-events: none;
 
     transition: background-color 0.3s ease;
@@ -104,15 +99,11 @@
     z-index: 20;
 
     width: 286px;
-
-    @include vp-1439 {
-      margin: 0 45px 0 0;
-    }
+    grid-column: 1/-1;
+    margin: 4px 0 0 auto;
 
     @include vp-767 {
       width: 290px;
-      margin: 0 15px 0 0;
-      top: 78px;
     }
 
     .is-open & {
@@ -243,7 +234,7 @@
     align-items: center;
     gap: 20px;
 
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 3px 3px 3px 19px;
     color: $color-blue;
     background: $color-white;
@@ -252,7 +243,7 @@
     cursor: pointer;
     transition: all $trans-default;
 
-    min-width: 134px;
+    width: 134px;
 
     span {
       color: $color-blue;
@@ -286,11 +277,12 @@
 
     .is-open & {
       background: $color-blue;
-      min-width: 286px;
+      width: 286px;
       transition: all $trans-default;
+      // grid-column: 2/3;
 
       @include vp-767 {
-        min-width: 290px;
+        width: 290px;
       }
 
       span {
