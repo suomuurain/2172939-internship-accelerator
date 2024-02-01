@@ -19,7 +19,7 @@
     <main class="main">
       <div data-test="slider" class="slider">
         <header class="header header--sticky" data-header="sticky" data-close-menu>
-          <div class="container">
+          <div class="container" data-close-menu>
 
             <div class="header__wrapper" data-accordion="parent" data-close-menu>
               <a class="header__logo" href="#" aria-label="Логотип Internship.">
@@ -246,14 +246,14 @@
                       <div class="hero__title-wrapper">
                         <h3>Волонтёрские программы&nbsp;– внесите свой вклад в&nbsp;общество</h3>
                       </div>
-                      <div class="hero__desc-wrapper">
+                      <div class="hero__desc-wrapper hero__desc-wrapper--large">
                         <div class="hero__description-wrapper">
                           <p>
                             Возможности для преподавания, органического
                             сельского хозяйства, устойчивого образа жизни и&nbsp;другое.
                           </p>
                         </div>
-                        <div class="hero__button-wrapper">
+                        <div class="hero__button-wrapper hero__button-wrapper--large">
                           <a href="#" class="hero__button button">
                             <span>Подробнее</span>
                             <div>
@@ -303,15 +303,15 @@
                       <div class="hero__title-wrapper">
                         <h3>Программы стажировок в&nbsp;крупнейших компаниях мира</h3>
                       </div>
-                      <div class="hero__desc-wrapper">
-                        <div class="hero__description-wrapper">
+                      <div class="hero__desc-wrapper hero__desc-wrapper--large">
+                        <div class="hero__description-wrapper hero__description-wrapper--large">
                           <p>
-                            Получите незаменимый опыт работы в&nbsp;ведущих
+                            Получите незаменимый опыт работы в&nbsp;ведущих <br>
                             мировых компаниях и&nbsp;государственных организациях.
                           </p>
                         </div>
 
-                        <div class="hero__button-wrapper">
+                        <div class="hero__button-wrapper hero__button-wrapper--large">
                           <a href="#" class="hero__button button">
                             <span>Подробнее</span>
                             <div>
@@ -671,8 +671,24 @@
             <div class="news__wrapper">
               <h2>Новости и материалы</h2>
 
-              <div class="news__filters">
-
+              <div class="news__nav">
+                <ul class="news__nav-list">
+                  <li class="news__nav-item">
+                    <button class="news__nav-button is-active" type="button">Общее</button>
+                  </li>
+                  <li class="news__nav-item">
+                    <button class="news__nav-button" type="button">Волонтёрство</button>
+                  </li>
+                  <li class="news__nav-item">
+                    <button class="news__nav-button" type="button">Стажировки</button>
+                  </li>
+                  <li class="news__nav-item">
+                    <button class="news__nav-button" type="button">Карьера</button>
+                  </li>
+                  <li class="news__nav-item">
+                    <button class="news__nav-button" type="button">Путешествия</button>
+                  </li>
+                </ul>
               </div>
 
               <!-- Slider main container -->
@@ -968,7 +984,7 @@
                   </div>
                 </div>
 
-                <!-- <div class="accordion__element accordion__element--large" data-accordion="element" tabindex="0">
+                <div class="accordion__element accordion__element--large" data-accordion="element" tabindex="0">
                   <h3 data-accordion="button">Как выглядит полный процесс регистрации <br> на&nbsp;программу «Стажировка»?</h3>
                   <button class="accordion__button button" type="button" data-accordion="button" aria-label="Открыть описание."></button>
                   <div class="accordion__content" data-accordion="content">
@@ -982,7 +998,7 @@
                       </p>
                     </div>
                   </div>
-                </div> -->
+                </div>
               </div>
             </div>
 
@@ -1188,11 +1204,11 @@
                       культурный центр
                     </p>
                   </li>
-                  <li class="contacts__item">
+                  <li class="contacts__item contacts__item--tel">
                     <h3>Телефон</h3>
                     <a href="tel:896387687676">+7 963 876 876 76</a>
                   </li>
-                  <li class="contacts__item">
+                  <li class="contacts__item contacts__item--email">
                     <h3>Email</h3>
                     <a href="mailto:info@stazh.ru">Info@stazh.ru</a>
                   </li>
@@ -1220,7 +1236,7 @@
               <div class="form__inner-wrapper">
                 <h2>Напишите нам</h2>
                 <p>
-                  Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;— мы&nbsp;на&nbsp;них ответим!
+                  Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;— <br> мы&nbsp;на&nbsp;них ответим!
                 </p>
                 <div class="form__form-container" data-form-validate data-callback="base">
                   <form action="https://echo.htmlacademy.ru/" method="post">
@@ -1420,7 +1436,7 @@
 
             <div class="custom-toggle custom-toggle--secondary" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
               <label class="custom-toggle__label custom-toggle__label--secondary">
-                <input type="checkbox" name="checkbox" value="agree" name="user-agreement" checked>
+                <input type="checkbox" name="checkbox" value="agree" name="user-agreement">
                 <span></span>
                 <svg width="10" height="8" aria-hidden="true">
                   <use href="__spritemap#sprite-checkbox-icon"></use>
