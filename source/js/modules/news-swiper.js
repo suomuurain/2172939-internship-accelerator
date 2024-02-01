@@ -6,18 +6,33 @@ const initNewsSwiper = () => {
   const swiperNews = new Swiper('.news__swiper', {
     breakpoints: {
       320: {
-        slidesPerView: 2,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
         allowTouchMove: true,
+        grid: {
+          rows: 2,
+          fill: 'column',
+        },
       },
       768: {
-        slidesPerView: 4,
+        slidesPerView: 2,
+        slidesPerGroup: 1,
         spaceBetween: 30,
         allowTouchMove: true,
+        grid: {
+          rows: 2,
+          fill: 'column',
+        },
       },
       1440: {
         slidesPerView: 'auto',
+        slidesPerGroup: 1,
         spaceBetween: 32,
         allowTouchMove: false,
+        grid: {
+          rows: 1,
+        },
       },
     },
 

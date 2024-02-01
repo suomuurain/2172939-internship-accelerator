@@ -5,6 +5,9 @@ const initHeroSwiper = () => {
 
   const swiperHero = new Swiper('.hero__swiper', {
     loop: true,
+    autoplay: {
+      delay: 3000,
+    },
 
     breakpoints: {
       320: {
@@ -13,9 +16,9 @@ const initHeroSwiper = () => {
       768: {
         allowTouchMove: true,
       },
-      // 1440: {
-      //   allowTouchMove: false,
-      // },
+      1440: {
+        allowTouchMove: false,
+      },
     },
 
     autoHeight: true,
