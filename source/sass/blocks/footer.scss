@@ -1,6 +1,14 @@
-// .footer {
-//   background-color: $color-transparent;
-// }
+.footer {
+  min-height: 157px;
+
+  @include vp-1439 {
+    min-height: 163px;
+  }
+
+  @include vp-767 {
+    min-height: 272px;
+  }
+}
 
 .footer__wrapper {
   display: grid;
@@ -18,7 +26,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 6px;
 
     padding: 0 0 60px;
   }
@@ -86,11 +94,11 @@
 
   @include vp-1439 {
     justify-content: flex-end;
-    gap: 15px;
+    gap: 15.5px;
   }
 
   @include vp-767 {
-    gap: 20px 30px;
+    gap: 6px 30px;
     justify-content: center;
   }
 }
@@ -166,6 +174,10 @@
 
   @include vp-1439 {
     gap: 10px;
+  }
+
+  @include vp-767 {
+    margin: 8px 0 0;
   }
 }
 
@@ -250,6 +262,7 @@
   }
 
   @include vp-767 {
+    gap: 13px;
     align-items: center;
     grid-column: unset;
   }
@@ -291,6 +304,7 @@
   position: relative;
 
   @include vp-1439 {
+    margin: 3px 0 0;
     font-size: 12px;
     line-height: 12px; /* 100% */
   }
@@ -309,7 +323,11 @@
     background-color: $color-basic;
 
     @include vp-1439 {
-      top: 14px;
+      top: 11px;
+    }
+
+    @include vp-767 {
+      top: 15px;
     }
   }
 

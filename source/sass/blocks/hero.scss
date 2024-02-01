@@ -205,9 +205,9 @@
 
 .hero__desc-wrapper {
   margin: -1px 0 0;
-  padding: 0px 50px 28px;
+  padding: 0 50px 28px;
   background-color: $color-white;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0 0 30px 30px;
   width: 62.3%;
 
   display: flex;
@@ -234,6 +234,26 @@
     border-radius: none;
     width: 92%;
   }
+
+  &--large {
+    padding: 7px 50px 36px;
+
+    @include vp-1439 {
+      padding: 0 40px 33px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      width: 90%;
+    }
+  }
+}
+
+.hero__description-wrapper br {
+
+  @include vp-1439 {
+    display: none;
+  }
 }
 
 .hero__description-wrapper {
@@ -250,6 +270,15 @@
     border-radius: 0px 0px 14px 0px;
     width: 100%;
   }
+
+  // &--large {
+  //   @include vp-767 {
+  //     padding: 0px 14px 10px 14px;
+  //     background-color: $color-white;
+  //     border-radius: 0px 0px 14px 0px;
+  //     width: 100%;
+  //   }
+  // }
 }
 
 .hero__description-wrapper p {
@@ -285,6 +314,12 @@
     border-radius: 0px 0px 14px 14px;
     width: 68.2%;
     position: relative;
+  }
+
+  &--large {
+    @include vp-767 {
+      width: 69.6%;
+    }
   }
 }
 

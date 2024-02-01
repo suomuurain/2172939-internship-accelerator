@@ -4,11 +4,11 @@
   min-height: 891px;
 
   @include vp-1439 {
-    padding: 100px 0;
+    padding: 100px 0 99px;
     min-height: 906px;
   }
 
-  @include vp-1439 {
+  @include vp-767 {
     padding: 67px 0;
     min-height: 651px;
   }
@@ -25,6 +25,9 @@
     gap: 30px;
   }
 
+  @include vp-767 {
+    gap: 31px;
+  }
 }
 
 .contacts__heading h2 {
@@ -39,10 +42,13 @@
   line-height: 50px; /* 100% */
 
   @include vp-1439 {
+    margin: 0;
+    padding: 0;
     font-size: 34px;
   }
 
   @include vp-767 {
+    padding: 2px 0 0;
     font-size: 20px;
     line-height: 20px; /* 100% */
   }
@@ -58,14 +64,15 @@
   width: 604px;
 
   @include vp-1439 {
-    margin: 0 0 30px;
+    margin: 0 0 25px;
     justify-content: space-between;
     width: 100%;
   }
 
   @include vp-767 {
+    margin: 0 0 23px;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
   }
 }
 
@@ -74,8 +81,12 @@
   flex-direction: column;
   gap: 15px;
 
+  @include vp-1439 {
+    gap: 18px;
+  }
+
   @include vp-767 {
-    gap: 15px;
+    gap: 8px;
   }
 }
 
@@ -114,6 +125,45 @@
   }
 }
 
+.contacts__item--tel a {
+  @include vp-767 {
+    width: 115px;
+  }
+}
+
+.contacts__item--email a {
+  @include vp-767 {
+    width: 91px;
+  }
+}
+
+.contacts__item a {
+  position: relative;
+
+  &:hover,
+  &:focus {
+    outline: none;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 22px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-white;
+
+      @include vp-767 {
+        top: 18px;
+      }
+    }
+  }
+
+  &:active {
+    color: $color-white-07;
+  }
+}
+
 .contacts__map {
   margin: 40px 0 0;
 
@@ -129,10 +179,10 @@
   @include vp-1439 {
     width: 100%;
     height: auto;
-    border-radius: 4%;
+    border-radius: 3%;
   }
 
   @include vp-767 {
-    border-radius: 8%;
+    border-radius: 6%;
   }
 }

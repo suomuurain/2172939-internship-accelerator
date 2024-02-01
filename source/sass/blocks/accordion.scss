@@ -31,14 +31,14 @@
   }
 
   @include vp-1439 {
-    padding: 30px;
+    padding: 24px 29px;
     min-height: 100px;
     align-items: center;
     column-gap: 1px;
   }
 
   @include vp-767 {
-    padding: 20px;
+    padding: 19px 14px;
     min-height: 80px;
     column-gap: 5px;
   }
@@ -91,6 +91,14 @@
   padding: 40px 40px 32px;
   border: 1px solid $color-blue;
   background-color: $color-blue;
+
+  @include vp-1439 {
+    padding: 24px 29px 25px;
+  }
+
+  @include vp-767 {
+    padding: 19px 14px 14px;
+  }
 
   &:hover .accordion__button,
   &:focus .accordion__button {
@@ -155,6 +163,10 @@
 .accordion__element--large h3 {
   padding: 0;
   margin: -7px 0 0;
+
+  @include vp-1439 {
+    margin: 0;
+  }
 }
 
 .accordion__element.is-active h3 {
@@ -300,9 +312,11 @@
     max-width: none;
     font-size: 16px;
     line-height: 20px; /* 125% */
+    margin: 11px 0 0;
   }
 
   @include vp-767 {
     font-size: 14px;
+    margin: 15px 0 0;
   }
 }

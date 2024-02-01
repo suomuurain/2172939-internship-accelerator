@@ -10,7 +10,14 @@
   flex-direction: column;
   gap: 11px;
 
+  @media screen and (max-width: 1439px) {
+    margin: -2px 0 0;
+    gap: 7px;
+  }
+
   @media screen and (max-width: 767px) {
+    margin: 0;
+    gap: 11px;
     width: 100%;
   }
 
