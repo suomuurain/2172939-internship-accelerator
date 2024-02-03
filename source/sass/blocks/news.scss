@@ -267,6 +267,12 @@
   }
 }
 
+.news__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .news__title-wrapper h3 {
   margin: 0;
   padding: 0;
@@ -292,8 +298,8 @@
 .news__desc-wrapper {
   margin: -1px 0 0;
   background-color: $color-beige;
-  padding: 8px 18px 11px 0px;
-  border-radius: 0px 12px;
+  padding: 8px 18px 11px 0;
+  border-radius: 0 12px;
 
   width: 84%;
   min-height: 57px;
@@ -309,8 +315,14 @@
 
   @include vp-1439 {
     width: 74%;
-    padding: 7px 18px 10px 0px;
+    padding: 7px 18px 10px 0;
   }
+}
+
+.news__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .news__description-wrapper p {
@@ -344,10 +356,10 @@
   background-color: $color-blue;
 
   &:hover,
-  &:focus  {
+  &:focus {
     background-color: $color-white;
     outline: none;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
   }
 
   &:hover svg,

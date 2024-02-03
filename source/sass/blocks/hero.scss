@@ -90,22 +90,17 @@
   width: 100%;
 }
 
-//info
-
 .hero__info {
   margin: 0 auto;
-  // padding: 379px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 
   @include vp-1439 {
-    // padding: 623px 0 0;
     padding: 0;
   }
 
   @include vp-767 {
-    // padding: 193px 0 0;
     padding: 0;
   }
 }
@@ -113,7 +108,7 @@
 .hero__pagination-wrapper {
   padding: 14px 20px;
   background-color: $color-white;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
   width: 7.6%;
   position: relative;
 
@@ -125,7 +120,7 @@
 
   @include vp-767 {
     padding: 10px 16px;
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 12px 12px 0 0;
     width: 27.6%;
 
     min-height: 28px;
@@ -177,7 +172,7 @@
 
   @include vp-767 {
     padding: 20px 14px 16px;
-    border-radius: 0px 16px 16px 0px;
+    border-radius: 0 16px 16px 0;
     width: 100%;
   }
 }
@@ -250,7 +245,6 @@
 }
 
 .hero__description-wrapper br {
-
   @include vp-1439 {
     display: none;
   }
@@ -265,9 +259,9 @@
   gap: 15px;
 
   @include vp-767 {
-    padding: 0px 14px 10px 14px;
+    padding: 0 14px 10px;
     background-color: $color-white;
-    border-radius: 0px 0px 14px 0px;
+    border-radius: 0 0 14px;
     width: 100%;
   }
 
@@ -311,7 +305,7 @@
     margin: -1px 0 0;
     padding: 10px 15px;
     background-color: $color-white;
-    border-radius: 0px 0px 14px 14px;
+    border-radius: 0 0 14px 14px;
     width: 68.2%;
     position: relative;
   }
@@ -365,7 +359,7 @@
   }
 
   &:hover,
-  &:focus  {
+  &:focus {
     color: $color-white;
     background-color: $color-blue;
     outline: none;
@@ -376,7 +370,7 @@
   &:active div {
     background-color: $color-white;
     outline: none;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
   }
 
   &:hover svg,

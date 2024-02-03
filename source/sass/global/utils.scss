@@ -19,11 +19,11 @@
     flex-direction: column;
     gap: 120px;
 
-    @media (max-width: 1439px) {
+    @media (768px <= width <= 1439px) {
       gap: 100px;
     }
 
-    @media (max-width: 767px) {
+    @media (320px <= width <= 767px) {
       gap: 60px;
     }
   }

@@ -15,7 +15,7 @@ import {initProgramsSwiper} from './modules/programs-swiper';
 import {initNewsSwiper} from './modules/news-swiper';
 import {initAccordions} from './vendor/accordions/init-accordions';
 import {CustomSelect} from './vendor/custom-select/custom-select';
-import {initModals} from "./vendor/modals/init-modals";
+import {initModals} from './vendor/modals/init-modals';
 
 // ---------------------------------
 

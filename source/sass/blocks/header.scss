@@ -14,14 +14,31 @@
     left: 0;
     width: 100%;
   }
+}
 
-  &.is-hidden {
-    transform: translateY(-100%);
+.header.is-hidden {
+  transform: translateY(-100%);
+}
+
+.header.is-open {
+  background-color: $color-overlay;
+  height: 100vh;
+
+  .header__item {
+    opacity: 1;
+    transform: translateX(0);
   }
 
-  &.is-open {
-    background-color: $color-overlay;
-    height: 100vh;
+  span {
+    color: $color-white;
+  }
+
+  .header__button-closed {
+    display: flex;
+  }
+
+  .header__button-opened {
+    display: none;
   }
 }
 
@@ -112,10 +129,10 @@
     pointer-events: all;
     visibility: visible;
 
-    .header__item {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    // .header__item {
+    //   opacity: 1;
+    //   transform: translateX(0);
+    // }
   }
 }
 
@@ -153,13 +170,18 @@
 
   transition: color 0.3s ease;
 
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      &:not(span) {
-        color: $color-white;
-        opacity: 1;
-      }
-    }
+  // @media (hover: hover) {
+  //   &:hover:not(.focus-visible) {
+  //     &:not(span) {
+  //       color: $color-white;
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
+
+  &:hover {
+    color: $color-white;
+    opacity: 1;
   }
 
   &:focus,
@@ -209,13 +231,18 @@
   font-weight: 400;
   line-height: 16px; /* 100% */
 
-  @media (hover: hover) {
-    &:hover:not(.focus-visible) {
-      &:not(span) {
-        color: $color-white;
-        opacity: 0.9;
-      }
-    }
+  // @media (hover: hover) {
+  //   &:hover:not(.focus-visible) {
+  //     &:not(span) {
+  //       color: $color-white;
+  //       opacity: 0.9;
+  //     }
+  //   }
+  // }
+
+  &:hover {
+    color: $color-white;
+    opacity: 0.9;
   }
 
   &:focus,
@@ -285,17 +312,17 @@
       width: 290px;
     }
 
-    span {
-      color: $color-white;
-    }
+    // span {
+    //   color: $color-white;
+    // }
 
-    .header__button-closed {
-      display: flex;
-    }
+    // .header__button-closed {
+    //   display: flex;
+    // }
 
-    .header__button-opened {
-      display: none;
-    }
+    // .header__button-opened {
+    //   display: none;
+    // }
   }
 }
 
@@ -315,6 +342,10 @@
 
 .header__button-closed {
   display: none;
+
+  svg {
+    color: $color-blue;
+  }
 }
 
 .header__button-opened {
@@ -326,6 +357,6 @@
   }
 }
 
-.header__item.is-active .header__link-submenu svg{
+.header__item.is-active .header__link-submenu svg {
   transform: rotate(180deg);
 }

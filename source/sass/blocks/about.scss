@@ -163,7 +163,7 @@
   }
 
   &:hover,
-  &:focus  {
+  &:focus {
     color: $color-white;
     background-color: $color-blue;
     outline: none;
@@ -174,7 +174,7 @@
   &:active div {
     background-color: $color-white;
     outline: none;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
   }
 
   &:hover svg,

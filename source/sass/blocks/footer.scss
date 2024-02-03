@@ -1,6 +1,8 @@
 .footer {
   min-height: 157px;
 
+  position: relative;
+
   @include vp-1439 {
     min-height: 163px;
   }
@@ -8,6 +10,23 @@
   @include vp-767 {
     min-height: 272px;
   }
+}
+
+.footer h2 {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
 .footer__wrapper {
@@ -90,11 +109,11 @@
 
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 0 30px;
 
   @include vp-1439 {
     justify-content: flex-end;
-    gap: 15.5px;
+    gap: 0 15.5px;
   }
 
   @include vp-767 {
@@ -349,12 +368,19 @@
     }
   }
 
-  &:disabled,
-  &--disabled {
+  &:disabled {
     color: $color-disabled;
 
     &::after {
       background-color: $color-disabled;
     }
+  }
+}
+
+.footer__privacy-policy--disabled {
+  color: $color-disabled;
+
+  &::after {
+    background-color: $color-disabled;
   }
 }

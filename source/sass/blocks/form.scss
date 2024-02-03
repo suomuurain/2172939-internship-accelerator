@@ -99,6 +99,13 @@
   height: 100%;
   object-fit: cover;
 
+  background: $color-blue-02;
+  border-radius: 16px;
+
+  @include vp-1439 {
+    border-radius: 2%;
+  }
+
   @include vp-767 {
     left: -15px;
     width: calc(100% + 30px);
@@ -115,13 +122,9 @@
   @include vp-1439 {
     border-radius: 2%;
   }
-
-  @include vp-767 {
-    border-radius: 2%;
-  }
 }
 
-//form container
+// form container
 
 .form__form-container form {
   display: flex;
@@ -250,6 +253,7 @@
     margin: 11px 0 0;
     padding: 3px 4px 3px 29px;
     gap: 18px;
+
     // width: 221px;
     min-width: 221px;
     min-height: 42px;
@@ -260,18 +264,18 @@
   }
 
   &:hover,
-  &:focus  {
+  &:focus {
     color: $color-blue;
     background-color: $color-white;
     outline: none;
   }
 
-  &:hover div,
-  &:focus div,
-  &:active div {
+  &:hover .form__button-icon,
+  &:focus .form__button-icon,
+  &:active .form__button-icon {
     background-color: $color-blue;
     outline: none;
-    transform: rotate(45deg)
+    transform: rotate(45deg);
   }
 
   &:hover svg,
@@ -295,8 +299,8 @@
     border: 1px solid $color-disabled;
   }
 
-  &:disabled div,
-  &--disabled div {
+  &:disabled .form__button-icon,
+  &--disabled .form__button-icon {
     background-color: $color-disabled;
   }
 
@@ -306,7 +310,7 @@
   }
 }
 
-.form__button > div {
+.form__button > .form__button-icon {
   border-radius: 44px;
   background-color: $color-white;
   width: 46px;
@@ -341,7 +345,8 @@
   }
 }
 
-//for modals
+// for modals
+
 .form__text-wrapper--secondary {
   display: flex;
   flex-direction: column;
@@ -436,12 +441,6 @@
   }
 }
 
-.form__input-wrapper--secondary span {
-  @include vp-767 {
-    font-size: 14px;
-    line-height: 14px; /* 100% */
-  }
-}
 
 .form__input-wrapper--secondary input,
 .form__input-wrapper--secondary textarea {
@@ -470,6 +469,11 @@
 
 .form__input-wrapper--secondary span {
   color: $color-basic-08;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px; /* 100% */
+  }
 }
 
 .form__button--secondary {
@@ -492,14 +496,14 @@
   }
 
   &:hover,
-  &:focus  {
+  &:focus {
     color: $color-white;
     background-color: $color-blue;
   }
 
-  &:hover div,
-  &:focus div,
-  &:active div {
+  &:hover .form__button-icon,
+  &:focus .form__button-icon,
+  &:active .form__button-icon {
     background-color: $color-white;
   }
 
@@ -519,7 +523,7 @@
   }
 }
 
-.form__button--secondary > div {
+.form__button--secondary > .form__button-icon {
   background-color: $color-blue;
 }
 
