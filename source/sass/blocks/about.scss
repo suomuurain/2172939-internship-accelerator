@@ -5,9 +5,9 @@
     min-height: 936px;
   }
 
-  // @include vp-1439 {
-  //   min-height: 936px;
-  // }
+  @include vp-767 {
+    min-height: 1109px;
+  }
 }
 
 .about__text-wrapper {
