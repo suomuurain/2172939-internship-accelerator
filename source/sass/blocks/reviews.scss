@@ -92,7 +92,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  transition: opacity $trans-default;
+  transition: background-color $trans-default;
 
   display: flex;
   justify-content: center;
@@ -101,6 +101,7 @@
   &:hover,
   &:focus {
     background-color: $color-white;
+    transition: background-color $trans-default;
     outline: none;
   }
 

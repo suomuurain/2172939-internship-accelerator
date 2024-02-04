@@ -97,6 +97,7 @@
   border: none;
   background-color: $color-transparent;
   cursor: pointer;
+  transition: background-color $trans-default;
 
   @include vp-1439 {
     padding: 12px 20px;
@@ -112,8 +113,16 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:active {
     color: $color-blue;
+    transition: background-color $trans-default;
+    outline: none;
+  }
+
+  &:disabled,
+  &--disabled {
+    color: $color-disabled;
   }
 }
 
@@ -121,6 +130,14 @@
   color: $color-blue;
   border-radius: 20px;
   border: 1px solid $color-blue;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-white;
+    background-color: $color-blue;
+    outline: none;
+  }
 }
 
 .news__swiper {
@@ -427,7 +444,7 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  transition: opacity $trans-default;
+  transition: background-color $trans-default;
 
   display: flex;
   justify-content: center;
@@ -436,6 +453,7 @@
   &:hover,
   &:focus {
     background-color: $color-white;
+    transition: background-color $trans-default;
     outline: none;
   }
 

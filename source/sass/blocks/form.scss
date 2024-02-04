@@ -126,7 +126,7 @@
 
 // form container
 
-.form__form-container form {
+.form__container form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -185,11 +185,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: 14px; /* 100% */
+  transition: border 0.3s ease;
 
   &:hover,
   &:focus,
   &:active {
     border: 1px solid $color-white;
+    transition: border 0.3s ease;
     outline: none;
   }
 
@@ -417,7 +419,7 @@
   }
 }
 
-.form__form-container--secondary form {
+.form__container--secondary form {
   @include vp-1439 {
     gap: 14px;
   }
