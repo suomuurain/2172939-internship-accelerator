@@ -10,24 +10,25 @@ $color-transparent: rgba(255, 255, 255, 0);
 // Project palette
 
 $color-basic: #484848;
-$color-basic-03: rgb(72, 72, 72, 0.3);
-$color-basic-08: rgb(72, 72, 72, 0.8);
+$color-basic-03: rgba(#484848, 0.3);
+$color-basic-08: rgba(#484848, 0.8);
 $color-white: #ffffff;
-$color-white-02: rgba(255, 255, 255, 0.2);
-$color-white-03: rgba(255, 255, 255, 0.3);
-$color-white-07: rgba(255, 255, 255, 0.7);
+$color-white-02: rgba(#ffffff, 0.2);
+$color-white-03: rgba(#ffffff, 0.3);
+$color-white-07: rgba(#ffffff, 0.7);
 $color-beige: #f0efe9;
 $color-blue: #316dc2;
-$color-blue-02: rgb(49, 109, 194, 0.2);
-$color-blue-05: rgb(49, 109, 194, 0.5);
-$color-blue-06: rgb(49, 109, 194, 0.6);
-$color-blue-07: rgb(49, 109, 194, 0.7);
+$color-blue-02: rgba(#316dc2, 0.2);
+$color-blue-05: rgba(#316dc2, 0.5);
+$color-blue-06: rgba(#316dc2, 0.6);
+$color-blue-07: rgba(#316dc2, 0.7);
 $color-condition: #275699;
 $color-disabled: #a9afb7;
-$color-disabled-secondary: rgba(169, 175, 183, 0.5);
+$color-disabled-secondary: rgba(#a9afb7, 0.5);
 $color-error: #ff5e66;
-$color-overlay: rgba(13, 29, 51, 0.4);
-$color-card-overlay: rgba(49, 109, 194, 0.2);
+$color-error-02: rgba(#ff5e66, 0.2);
+$color-overlay: rgba(#0d1d33, 0.4);
+$color-card-overlay: rgba(#316dc2, 0.2);
 
 // Typography
 // ---------------------------------

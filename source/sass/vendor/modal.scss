@@ -47,7 +47,7 @@
 
 .modal__wrapper {
   transform: translateZ(0);
-  background-color: rgba(13, 29, 51, 0.4);
+  background-color: rgba(#0d1d33, 0.4);
   position: relative;
 
   display: flex;
@@ -99,7 +99,7 @@
 
   padding: 5px;
 
-  background: rgba(255, 255, 255, 0);
+  background: rgba(#ffffff, 0);
   border: none;
   cursor: pointer;
 
@@ -107,6 +107,19 @@
 
   svg {
     display: block;
+    color: #316dc2;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background: #316dc2;
+
+    svg {
+      display: block;
+      color: #ffffff;
+    }
   }
 
   @media (max-width: 767px) {
