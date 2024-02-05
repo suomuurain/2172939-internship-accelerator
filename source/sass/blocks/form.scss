@@ -137,7 +137,8 @@
   }
 }
 
-.form__input-wrapper label {
+.form__input-wrapper label,
+.form__input-wrapper .form__message-label {
   display: flex;
   flex-direction: column;
   gap: 8px;

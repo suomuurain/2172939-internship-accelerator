@@ -94,6 +94,7 @@
 
 .grant__heading img {
   border-radius: 16px;
+  object-fit: cover;
 
   @include vp-1439 {
     width: 100%;
