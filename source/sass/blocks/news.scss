@@ -35,8 +35,8 @@
   }
 
   @include vp-767 {
-    margin: 2px 0 27px;
-    padding: 0 15px 0 0;
+    margin: 0 0 27px;
+    padding: 2px 15px 0 0;
     font-size: 20px;
     line-height: 20px; /* 100% */
   }
@@ -154,7 +154,6 @@
   margin: 0 0 39px;
 
   @include vp-1439 {
-    // width: calc(100% - 45px);
     width: 100%;
     height: 730px;
     margin: 0 0 30px;
@@ -497,19 +496,6 @@
   display: flex;
   justify-content: center;
 }
-
-
-// .news__swiper-buttons {
-//   position: absolute;
-//   right: 0;
-//   bottom: 0;
-//   display: flex;
-//   gap: 10px;
-
-//   @include vp-767 {
-//     gap: 8px;
-//   }
-// }
 
 .news__swiper-button {
   width: 22px;

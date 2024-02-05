@@ -165,15 +165,6 @@
 
   transition: color 0.3s ease;
 
-  // @media (hover: hover) {
-  //   &:hover:not(.focus-visible) {
-  //     &:not(span) {
-  //       color: $color-white;
-  //       opacity: 1;
-  //     }
-  //   }
-  // }
-
   &:hover {
     color: $color-white;
     opacity: 1;
@@ -225,15 +216,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 16px; /* 100% */
-
-  // @media (hover: hover) {
-  //   &:hover:not(.focus-visible) {
-  //     &:not(span) {
-  //       color: $color-white;
-  //       opacity: 0.9;
-  //     }
-  //   }
-  // }
 
   &:hover {
     color: $color-white;
@@ -306,18 +288,6 @@
     @include vp-767 {
       width: 290px;
     }
-
-    // span {
-    //   color: $color-white;
-    // }
-
-    // .header__button-closed {
-    //   display: flex;
-    // }
-
-    // .header__button-opened {
-    //   display: none;
-    // }
   }
 }
 
