@@ -243,22 +243,28 @@
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
         background-color: rgba(#ffffff, 0.3);
+        color: #316dc2;
       }
     }
 
     &.focus-visible:focus {
       background-color: rgba(#ffffff, 0.3);
+      color: #316dc2;
     }
   }
 
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
-      background-color: rgba(#ffffff, 0.3);
+      background-color: #ffffff;
+      color: #316dc2;
     }
   }
 
-  &.focus-visible:focus {
-    background-color: rgba(#ffffff, 0.3);
+  &.focus-visible:focus,
+  &:active,
+  &:focus {
+    background-color: #316dc2;
+    color: #ffffff;
   }
 }
 
