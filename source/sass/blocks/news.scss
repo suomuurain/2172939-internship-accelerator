@@ -273,6 +273,10 @@
   border-radius: 0 12px 0 0;
   width: 74.8%;
 
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
   &--large {
     padding: 14px 10px 2px 0;
     width: 48.2%;
@@ -282,12 +286,6 @@
     width: 63.8%;
     padding: 5px 10px 2px 0;
   }
-}
-
-.news__title-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
 }
 
 .news__title-wrapper h3 {

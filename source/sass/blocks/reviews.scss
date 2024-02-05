@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    min-height: 490px;
+    min-height: 491px;
 
     overflow: hidden;
   }
@@ -53,7 +53,7 @@
   }
 
   @include vp-767 {
-    margin: 0 0 32px;
+    margin: 0 0 31px;
     padding: 3px 0 0;
     font-size: 20px;
     line-height: 20px; /* 100% */
@@ -168,7 +168,7 @@
 
   @include vp-767 {
     min-height: 435px;
-    padding: 29px 14px 23px;
+    padding: 30px 14px 23px;
     gap: 24px;
     max-width: none;
   }
@@ -231,6 +231,7 @@
   @include vp-767 {
     margin: 0;
     justify-content: flex-start;
+    gap: 26px;
 
     grid-column: 1/-1;
   }
