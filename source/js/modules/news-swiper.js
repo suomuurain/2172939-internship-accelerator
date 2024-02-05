@@ -29,7 +29,7 @@ const initNewsSwiper = () => {
         slidesPerView: 'auto',
         slidesPerGroup: 1,
         spaceBetween: 32,
-        allowTouchMove: false,
+        allowTouchMove: true,
         grid: {
           rows: 1,
         },
