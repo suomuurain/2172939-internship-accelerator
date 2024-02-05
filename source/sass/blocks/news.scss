@@ -227,6 +227,20 @@
       display: flex;
     }
   }
+
+  &:nth-child(2n+1) {
+    @include vp-767 {
+      min-height: 330px;
+      max-height: 330px;
+    }
+  }
+
+  &:nth-child(2n) {
+    @include vp-767 {
+      min-height: 240px;
+      max-height: 240px;
+    }
+  }
 }
 
 .news__background {
@@ -271,6 +285,10 @@
     width: 23.9%;
     padding: 3px 10px 1px 0;
   }
+
+  @include vp-767 {
+    width: 27.2%;
+  }
 }
 
 .news__date-wrapper b {
@@ -300,14 +318,29 @@
 
   position: relative;
 
-  &--large {
-    padding: 14px 10px 2px 0;
-    width: 48.2%;
-  }
-
   @include vp-1439 {
     width: 63.8%;
     padding: 5px 10px 2px 0;
+  }
+
+  @include vp-767 {
+    width: 68.8%;
+    padding: 10px 10px 5px 0;
+  }
+
+  &--large {
+    padding: 14px 10px 2px 0;
+    width: 48.2%;
+
+    @include vp-1439 {
+      width: 63.8%;
+      padding: 5px 10px 2px 0;
+    }
+
+    @include vp-767 {
+      width: 68.8%;
+      padding: 10px 10px 5px 0;
+    }
   }
 }
 
@@ -349,13 +382,28 @@
 
   position: relative;
 
-  &--large {
-    width: 64.4%;
-  }
-
   @include vp-1439 {
     width: 74%;
     padding: 7px 18px 10px 0;
+  }
+
+  @include vp-767 {
+    width: 90.8%;
+    padding: 7px 10px 4px 0;
+    min-height: 52px;
+  }
+
+  &--large {
+    width: 64.4%;
+
+    @include vp-1439 {
+      width: 74%;
+    }
+
+    @include vp-767 {
+      width: 90.8%;
+      padding: 13px 10px 9px 0;
+    }
   }
 }
 
