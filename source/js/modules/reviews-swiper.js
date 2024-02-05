@@ -7,6 +7,7 @@ const initReviewsSwiper = () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        spaceBetween: 20,
         allowTouchMove: true,
         scrollbar: false,
       },

@@ -7,11 +7,12 @@ const initProgramsSwiper = () => {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        spaceBetween: 20,
         allowTouchMove: true,
         scrollbar: false,
       },
       768: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 30,
         allowTouchMove: true,
 
