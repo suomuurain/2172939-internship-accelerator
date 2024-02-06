@@ -3,6 +3,7 @@ import {Form} from './vendor/form-validate/form';
 
 import {Burger} from './vendor/header/burger';
 import {StickyHeader} from './vendor/header/sticky-header';
+import {initMenuToggel} from './modules/menuToggel';
 
 import {initHeroSwiper} from './modules/hero-swiper';
 import {initReviewsSwiper} from './modules/reviews-swiper';
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   initHeroSwiper();
+  initMenuToggel();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
