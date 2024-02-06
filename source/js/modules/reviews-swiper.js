@@ -12,7 +12,7 @@ const initReviewsSwiper = () => {
         scrollbar: false,
       },
       768: {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 30,
         allowTouchMove: true,
 
@@ -21,7 +21,7 @@ const initReviewsSwiper = () => {
         },
       },
       1440: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 32,
         allowTouchMove: true,
 
