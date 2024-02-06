@@ -142,10 +142,6 @@
   }
 }
 
-.reviews__swiper-wrapper {
-  height: auto;
-}
-
 .reviews__slide {
   background-color: $color-transparent;
   border-radius: 16px;
@@ -158,7 +154,6 @@
 
   max-width: 604px;
   min-height: 456px;
-  height: auto;
 
   @include vp-1439 {
     max-width: 560px;
