@@ -41,14 +41,15 @@
                       <use href="__spritemap#sprite-menu-close"></use>
                     </svg>
                   </span>
-
                 </span>
               </button>
 
               <nav class="header__navigation">
                 <ul class="header__list" data-accordion="parent">
                   <li class="header__item">
-                    <a class="header__link" href="#about">О проекте</a>
+                    <a class="header__link" href="#about" data-link>
+                      О проекте
+                    </a>
                   </li>
 
                   <li class="header__item" data-accordion="element">
@@ -61,25 +62,22 @@
 
                     <ul class="header__sublist" data-accordion="content">
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#programs">
+                        <a class="header__sublist-link" href="#programs" data-link>
                           Стажировки
                         </a>
                       </li>
-
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#programs">
+                        <a class="header__sublist-link" href="#programs" data-link>
                           Волонтёрство
                         </a>
                       </li>
-
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#programs">
+                        <a class="header__sublist-link" href="#programs" data-link>
                           Учёба
                         </a>
                       </li>
-
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#programs">
+                        <a class="header__sublist-link" href="#programs" data-link>
                           Религия
                         </a>
                       </li>
@@ -87,13 +85,13 @@
                   </li>
 
                   <li class="header__item">
-                    <a class="header__link" href="#grant">
+                    <a class="header__link" href="#grant" data-link>
                       Как поехать
                     </a>
                   </li>
 
                   <li class="header__item">
-                    <a class="header__link" href="#reviews">
+                    <a class="header__link" href="#reviews" data-link>
                       Отзывы
                     </a>
                   </li>
@@ -108,31 +106,27 @@
 
                     <ul class="header__sublist" data-accordion="content">
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#news">
+                        <a class="header__sublist-link" href="#news" data-link>
                           Общее
                         </a>
                       </li>
-
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#news">
+                        <a class="header__sublist-link" href="#news" data-link>
                           Волонтёрство
                         </a>
                       </li>
-
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#news">
+                        <a class="header__sublist-link" href="#news" data-link>
                           Стажировки
                         </a>
                       </li>
-
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#news">
+                        <a class="header__sublist-link" href="#news" data-link>
                           Карьера
                         </a>
                       </li>
-
                       <li class="header__sublist-item">
-                        <a class="header__sublist-link" href="#news">
+                        <a class="header__sublist-link" href="#news" data-link>
                           Путешествия
                         </a>
                       </li>
@@ -140,7 +134,7 @@
                   </li>
 
                   <li class="header__item">
-                    <a class="header__link" href="#contacts">
+                    <a class="header__link" href="#contacts" data-link>
                       Контакты
                     </a>
                   </li>
@@ -550,7 +544,8 @@
                         <source type="image/webp" media="(min-width: 1440px)" srcset="./img/programs/coworkers-desktop.webp 1x, ./img/programs/coworkers-desktop@2x.webp 2x" width="392" height="420">
                         <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/programs/coworkers-mobile.jpg 1x, ./img/programs/coworkers-mobile@2x.jpg 2x" width="290" height="400">
                         <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/programs/coworkers-tablet.jpg 1x, ./img/programs/coworkers-tablet@2x.jpg 2x" width="324" height="420">
-                        <img src="./img/programs/coworkers-desktop.jpg" srcset="./img/programs/coworkers-desktop@2x.jpg 2x" alt="Коллеги на стажировке." width="392" height="420">
+                        <img src="./img/programs/coworkers-desktop.jpg" srcset="./img/programs/coworkers-desktop@2x.jpg 2x" alt="Коллеги на стажировке." width="392" height="420"
+                          loading="lazy">
                       </picture>
                     </div>
                     <div class="programs__info">
@@ -908,7 +903,8 @@
                         <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/library-desktop.webp 1x, ./img/news/library-desktop@2x.webp 2x" width="604" height="400">
                         <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/news/library-mobile.jpg 1x, ./img/news/library-mobile@2x.jpg 2x" width="290" height="330">
                         <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/news/library-tablet.jpg 1x, ./img/news/library-tablet@2x.jpg 2x" width="324" height="350">
-                        <img src="./img/news/library-desktop.jpg" srcset="./img/news/library-desktop@2x.jpg 2x" alt="Студенты в библиотеке." width="604" height="400">
+                        <img src="./img/news/library-desktop.jpg" srcset="./img/news/library-desktop@2x.jpg 2x" alt="Студенты в библиотеке." width="604" height="400"
+                          loading="lazy">
                       </picture>
                     </div>
                     <div class="news__info">
@@ -961,7 +957,8 @@
                         <source type="image/webp" media="(min-width: 1440px)" srcset="./img/news/seafront-desktop.webp 1x, ./img/news/seafront-desktop@2x.webp 2x" width="286" height="400">
                         <source media="(max-width: 767px)" type="image/jpeg" srcset="./img/news/seafront-mobile.jpg 1x, ./img/news/seafront-mobile@2x.jpg 2x" width="290" height="240">
                         <source media="(max-width: 1439px)" type="image/jpeg" srcset="./img/news/seafront-tablet.jpg 1x, ./img/news/seafront-tablet@2x.jpg 2x" width="324" height="350">
-                        <img src="./img/news/seafront-desktop.jpg" srcset="./img/news/seafront-desktop@2x.jpg 2x" alt="Вид на набережную." width="286" height="400">
+                        <img src="./img/news/seafront-desktop.jpg" srcset="./img/news/seafront-desktop@2x.jpg 2x" alt="Вид на набережную." width="286" height="400"
+                          loading="lazy">
                       </picture>
                     </div>
                     <div class="news__info">
