@@ -3,7 +3,7 @@ import {Form} from './vendor/form-validate/form';
 
 import {Burger} from './vendor/header/burger';
 import {StickyHeader} from './vendor/header/sticky-header';
-import {initMenuToggel} from './modules/menuToggel';
+import {initMenuToggel} from './modules/menu';
 
 import {initHeroSwiper} from './modules/hero-swiper';
 import {initReviewsSwiper} from './modules/reviews-swiper';
