@@ -40,6 +40,18 @@
   .header__button-opened {
     display: none;
   }
+
+  .header__logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $color-overlay;
+    z-index: 5;
+  }
 }
 
 .header__wrapper {
@@ -65,21 +77,24 @@
 
   transition: background-color $trans-default;
 
+  position: relative;
+
   .is-open & {
     @include vp-767 {
       display: none;
     }
   }
 
-  &:hover,
-  &:focus {
-    outline: none;
+  &:hover {
     background-color: $color-blue;
     transition: background-color $trans-default;
   }
 
-  &:hover svg,
-  &:focus svg {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover svg {
     color: $color-white;
     transition: background-color $trans-default;
   }
