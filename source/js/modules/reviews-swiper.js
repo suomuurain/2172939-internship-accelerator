@@ -23,7 +23,7 @@ const initReviewsSwiper = () => {
       1440: {
         slidesPerView: 2,
         spaceBetween: 32,
-        allowTouchMove: true,
+        allowTouchMove: false,
 
         scrollbar: {
           el: '.reviews__scrollbar',
