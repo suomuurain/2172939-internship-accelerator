@@ -66,6 +66,7 @@
   list-style-type: none;
 
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 
   @include vp-1439 {
@@ -74,6 +75,8 @@
 
   @include vp-767 {
     gap: 12.5px;
+
+    flex-wrap: nowrap;
 
     min-width: 100%;
     min-height: 29px;
