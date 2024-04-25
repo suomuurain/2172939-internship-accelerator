@@ -6,7 +6,7 @@ const initProgramsSwiper = () => {
   const swiperPrograms = new Swiper('.programs__swiper', {
     breakpoints: {
       320: {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 20,
         allowTouchMove: true,
         scrollbar: false,
