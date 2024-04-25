@@ -17,6 +17,7 @@
   border-radius: 16px;
   color: $color-blue;
   background-color: $color-transparent;
+  transition: background-color $trans-default;
 
   display: grid;
   grid-template-columns: 1fr 40px;
